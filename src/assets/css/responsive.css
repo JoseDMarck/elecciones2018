@@ -1,0 +1,562 @@
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1920px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:4000px) {
+
+ 
+ .BloquesElecciones{
+  width: 20%;
+}
+
+
+.Bloque_GrandeF {
+  width: 40% !important;
+}
+
+
+
+}/* 2200 */
+
+
+@media only screen and (max-width:2100px) {
+
+
+
+
+ 
+ 
+}/* 2200 */
+
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1920px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:1920px) {
+
+
+
+ .BloquesElecciones{
+  width: 25%;
+}
+
+
+.Bloque_GrandeF {
+  width: 50% !important;
+}
+
+ 
+ 
+}/* 19320 */
+
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1800px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:1800px) {
+
+  
+ 
+
+
+}/* 2200 */
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1690px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:1690px) {
+
+  .menu {
+    font-size: 17px;
+    height: auto;
+  }
+
+  .menu > .Bloques {
+    padding-top: 20px;
+    padding-bottom:  20px;
+    height: auto;
+  }
+
+  .BloqueRed{
+    margin-right: 0px;
+  }
+
+} /* 1690 */
+
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1540px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:1540px) {
+
+ .menu {
+    font-size: 15px;
+    height: auto;
+    padding-left: 0px;
+  }
+
+  .menu > .Bloques {
+     margin-left: 0px;
+  }
+
+
+
+
+}
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1480px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:1520px) {
+
+.ContendorBloquePost > .imagen{
+  width: 100%;
+  height: 300px;
+}
+
+
+
+} /* 1520 */
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1480px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:1480px) {
+ 
+ 
+
+
+.ContendorBloquePost > .imagen img{
+  width: 150%;
+  height: auto;
+}
+
+.ContendorBloquePost > .titulo {
+  font-size: 26px;
+  line-height: 28px;
+}
+
+
+
+}/* 14480 */
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1366px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:1366px) {
+
+ 
+.header > .logo {
+    width: 480px;
+}
+
+
+
+}/* 1366 */
+
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1280px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:1290px) {
+
+
+.ContendorBloquePost > .titulo {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.ContendorBloquePost > .categoria {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+
+
+ 
+}/* 1280 */
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1280px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:1280px) {
+
+.BloquesElecciones{
+  width: 33.33%;
+}
+
+
+.Bloque_GrandeF {
+  width: 66.66% !important;
+}
+
+
+}/* 1280 */
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1200px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:1220px) {
+
+
+
+
+
+
+
+}/* 1200 */
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1110px
+-------------------------------------------------------- */
+ 
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1152px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:1152px) {
+ 
+
+ .menu {
+    font-size: 13px;
+    height: auto;
+    padding-left: 0px;
+  }
+
+  .menu > .Bloques {
+     margin-left: 0px;
+  }
+
+
+
+
+
+}/* 1152 */
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1024px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:1060px) {
+ 
+ 
+
+
+}
+
+/* --------------------------------------------------------
+/* ---- Responsive: 1024px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:1024px) {
+ 
+
+.ContendorBloquePost {
+  height: 570px
+}
+
+
+.ContendorBloquePost > .imagen{
+  width: 100%;
+  height: 260px;
+}
+
+
+.ContendorBloquePost > .extracto {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+
+.ContendorBloquePost > .titulo  {
+    font-size: 20px;
+    line-height: 22px;
+}
+
+
+.ContendorBloquePost > .categoria  {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+
+
+
+}/* 1024 */
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 911px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:911px) {
+
+  
+
+
+}
+
+/* --------------------------------------------------------
+/* ---- Responsive: 910px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:910px) {
+
+ 
+
+}/* 900 */
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 830px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:860px) {
+
+ 
+ .ContendorBloquePost > .imagen{
+  width: 100%;
+  height: 200px;
+}
+
+
+
+.ContendorBloquePost {
+    height: 500px;
+}
+
+
+}/* 900 */
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 740px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:780px) {
+
+
+.BloquesElecciones {
+    width: 50%;
+}
+ 
+
+.Bloque_GrandeF {
+    width: 50% !important;
+}
+
+}
+
+/* --------------------------------------------------------
+/* ---- Responsive: 700px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:700px) {
+
+ 
+
+}/* 900 */
+
+
+
+ 
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 600px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:660px) {
+
+ 
+
+
+
+}/* 900 */
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 568px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:568px) {
+
+
+.ContendorBloquePost{
+    height: 480px;
+}
+
+
+
+ .ContendorBloquePost > .extracto {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+
+.header > .logo {
+    width: 100%;
+}
+
+
+}/* 900 */
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 520px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:520px) {
+
+ 
+
+}/* 520 */
+
+/* --------------------------------------------------------
+/* ---- Responsive: 900px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:490px) {
+
+ .ContendorBloquePost  > .imagen  {
+    width: 100%;
+    height: 160px;
+}
+
+
+
+ .ContendorBloquePost{
+    height: 440px;
+}
+
+
+
+ .ContendorBloquePost > .extracto {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+
+.ContendorBloquePos > .titulo {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+
+.ContendorBloquePost > .imagen > .fecha {
+    width: 50px;
+    height: 50px;
+     
+}
+
+.ContendorBloquePost > .imagen > .fecha > .mes {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.ContendorBloquePost > .imagen > .fecha > .dia {
+    font-size: 27px;
+    line-height: 26px;
+}
+
+
+}/* 900 */
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 900px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:460px) {
+
+
+
+ 
+
+}/* 900 */
+
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 900px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:420px) {
+
+
+.ContendorBloquePost > .titulo {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.ContendorBloquePost > .categoria {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+
+ 
+
+
+}
+
+/* --------------------------------------------------------
+/* ---- Responsive: 900px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:400px) {
+
+
+  .BloquesElecciones {
+    width: 100%;
+}
+ 
+
+.Bloque_GrandeF {
+    width: 100% !important;
+}
+
+.ContendorBloquePost > .imagen {
+    width: 100%;
+    height: 220px;
+}
+
+
+}/* 900 */
+
+
+

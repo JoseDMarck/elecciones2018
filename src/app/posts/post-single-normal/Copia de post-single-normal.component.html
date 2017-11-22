@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link rel="stylesheet" href="assets/bootstrap-4.0.0-beta-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="contenidoPost flexcroll-Amarillo" *ngIf="post">
+  
+<!-- Imagen del post -->
+ 
+	<div class="Seccion-titulo">
+
+ 
+
+
+		<div class="BloqueDatos">
+			    <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="fecha">{{ post.post_fecha}}</div>
+                <div class="autor">{{post.post_author}}</div>		
+		</div><!-- BloqueDatos -->
+
+	<div style="clear: both;"></div>
+	</div><!-- Seccion-titulo -->
+
+
+	<div class="imagenPost">
+		<img src="{{ post.imagen_minsize }}" class="img-fluid">
+	</div>
+ 
+	
+	<div [innerHTML]="post.content.rendered"></div>
+ 
+ 
+
+<div *ngIf="!post">
+	<img class="img-fluid" src="assets/images/home/loading2.gif">	
+</div>
+
+</div>
+
+
+</body>
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</html>
+
+
+

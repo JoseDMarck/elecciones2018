@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cultura 3.0</title>
+	<link rel="stylesheet" href="assets/bootstrap-4.0.0-beta-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+<body>
+
+
+
+<div class="menu-container">
+
+  <div class="menu-web text-gray-dar">
+      
+      <div class="menu-logo">
+        <img class="img-fluid"  src="assets/images/home/Cultura-3.0-Logo.png"> 
+      </div><!-- menu-logo -->
+
+      
+
+      <!-- Menu ****** -->
+      <div class="menus" >
+      <!--on-mouseover='menu_over("_1")' on-mouseleave='menu_leave(_1)' -->
+        <div class="Bloques menu-current" (click)="GotoInicio(0)"  [ngClass]="{'menu-current': selectedClass === 0}">
+          Inicio   
+        </div>
+
+
+          <div class="Bloques menu-current"  (click)="SeleccionMenu(1, 'cartelera');" [ngClass]="{'menu-current': selectedClass === 1}">
+          <span class="color-txt-amarillo">*</span> Cartelera 
+        </div>
+
+        <div class="Bloques" (click)="SeleccionMenu(2, 'musica');" [ngClass]="{'menu-current': selectedClass === 2}"> 
+          <span class="color-txt-azul">*</span> Música
+        </div>
+
+        <div class="Bloques"  (click)="SeleccionMenu(3, 'cine');" [ngClass]="{'menu-current': selectedClass === 3}">
+          <span class="color-txt-verde">*</span> Cine
+        </div>
+
+        <div class="Bloques"  (click)="SeleccionMenu(4, 'libros-revistas');" [ngClass]="{'menu-current': selectedClass === 4}">
+          <span class="color-txt-rosa">*</span> Libros / Revistas
+        </div>
+
+
+        <div class="Bloques" (click)="SeleccionMenu(5, 'radio-potcast');" [ngClass]="{'menu-current': selectedClass === 5}">
+          <span class="color-txt-amarillo">*</span> Radio / Podcast
+        </div>
+
+        <div class="Bloques" (click)="SeleccionMenu(6, 'gastronomia');" [ngClass]="{'menu-current': selectedClass === 6}">
+          <span class="color-txt-azul">*</span> Gastronomia
+        </div>
+
+        <div class="Bloques" (click)="SeleccionMenu(7, 'artesania');" [ngClass]="{'menu-current': selectedClass === 7}">
+          <span class="color-txt-verde">*</span> Artesanía
+        </div>
+
+        <div class="Bloques" (click)="SeleccionMenu(8, 'viajes');" [ngClass]="{'menu-current': selectedClass === 8}">
+          <span  class="color-txt-rosa">*</span> Viajes
+        </div>
+
+        <div class="Bloques" (click)="SeleccionMenu(9, 'trueques');" [ngClass]="{'menu-current': selectedClass === 9}">
+          <span  class="color-txt-amarillo">*</span> Trueques
+        </div>
+
+        <div class="Bloques" (click)="SeleccionMenu(10, 'espacios');" [ngClass]="{'menu-current': selectedClass === 10}">
+          <span  class="color-txt-verde">*</span> Espacios
+        </div>
+
+
+        <div class="Bloques" (click)="SeleccionMenu(11, 'exposiciones');" [ngClass]="{'menu-current': selectedClass === 11}">
+          <span  class="color-txt-rosa">*</span> Exposiciones
+        </div>
+
+
+        <div class="Bloques" (click)="SeleccionMenu(12, 'conferencias-cursos-talleres');" [ngClass]="{'menu-current': selectedClass === 12}">
+          <span  class="color-txt-amarillo">*</span> Conferencias<br>Cursos<br>Talleres
+        </div>
+
+      </div><!-- menu-->
+    
+
+
+
+    </div><!-- col -->
+
+</div>
+
+
+</body>
+ <link rel="stylesheet" href="assets/css/responsive.css">
+</html>
