@@ -94,12 +94,11 @@ dhms2(t) {
 
 
 
-  getPosts_Home(){
+  getPosts(){
     this.postsService
-      .getPostsHome()
+      .getPosts_Entrana()
       .subscribe(res => {
         this.posts = res;
-
         console.log(this.posts)
          //this.imageX = this.sanitizer.bypassSecurityTrustStyle(`url(${element.image})`);
       });
@@ -139,7 +138,7 @@ dhms2(t) {
 
   ngOnInit() {
 
-    this.getPosts_Home();
+    this.getPosts();
 
 
        this.future = new Date(this.futureString);
@@ -185,7 +184,7 @@ onScroll () {
    
    console.log("numero load more "+ numero)
     this.postsService
-      .LoadMorePostsServiceHome(numero)
+      .LoadMorePostsServicebyCategory(29, numero)
       .subscribe(res => {
         this.posts = res;
 
