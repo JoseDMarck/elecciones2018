@@ -192,4 +192,10 @@ onScroll () {
 
 
 
+SeleccionMenu(slug:string ) {
+     this.router.navigate(["publicaciones-"+slug]);
+}
+
+
+
 }
