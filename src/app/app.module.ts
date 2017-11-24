@@ -24,6 +24,7 @@ import { PostListEspaciosComponent } from './posts/post-list-espacios/post-list-
 import { ExposicionesComponent  } from './posts/exposiciones/exposiciones.component';
 import { ConferenciasComponent  } from './posts/conferencias/conferencias.component';
 import { InicioComponent } from './posts/inicio/inicio.component';
+import { EntranaComponent } from './posts/entrana/entrana.component';
 import {ShareModule} from 'ng2share/share.module'
 
 import { MenuGeneralComponent } from './posts/menu-general/menu-general.component';
@@ -56,6 +57,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     InicioComponent,
     ExposicionesComponent,
     ConferenciasComponent,
+    EntranaComponent,
     CeiboShare,
     PostListEspaciosComponent
   ],
