@@ -14,6 +14,7 @@ import { PostListTruequesComponent } from './posts/post-list-trueques/post-list-
 import { ExposicionesComponent  } from './posts/exposiciones/exposiciones.component';
 import { ConferenciasComponent  } from './posts/conferencias/conferencias.component';
 import { PostListEspaciosComponent } from './posts/post-list-espacios/post-list-espacios.component';
+import { EntranaComponent } from './posts/entrana/entrana.component';
 import { InicioComponent } from './posts/inicio/inicio.component';
 
 
@@ -39,6 +40,13 @@ const routes: Routes = [
     }
   },
 
+  {
+    path: 'publicaciones-entrana',
+    component: EntranaComponent,
+    pathMatch: 'full'
+  },
+
+  
    {
     path: 'publicaciones-cine',
     component: PostListCineComponent,
