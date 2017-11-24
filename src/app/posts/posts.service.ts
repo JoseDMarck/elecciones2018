@@ -405,6 +405,21 @@ private postsUrl = "http://meditarensupabra.com/demos/AudiosCDO/wp-json/wp/v2/";
   }
 
 
+   getPosts_Entrana(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=29&posts_per_page=100&order=asc')
+        .map((res: Response) => res.json());
+  }
+
+  // LOADMORE HOME
+   LoadMorePostsServicebyCategory(cat,numero): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories='+cat+'&per_page='+numero+'&order=asc')
+        .map((res: Response) => res.json());
+  }
+
+
+
 
 
 
