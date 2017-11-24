@@ -29,6 +29,7 @@ import {ShareModule} from 'ng2share/share.module'
 import { MenuGeneralComponent } from './posts/menu-general/menu-general.component';
 import { RouterModule } from '@angular/router';
 import { CeiboShare } from 'ng2-social-share';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
 
@@ -64,6 +65,7 @@ import { CeiboShare } from 'ng2-social-share';
     HttpModule,
     Wpng2RoutingModule,
     ShareModule,
+    InfiniteScrollModule,
     BrowserAnimationsModule
   ],
   providers: [Title],
