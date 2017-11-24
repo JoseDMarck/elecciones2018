@@ -34,7 +34,6 @@ function vimeo_upload_form(){
 
           <div class="BloqueA">Descripción</div>
           <div class="BloqueB"><input type="text" name="descripcion_nota" id="descripcion_nota" size="45" value="<?php echo $excerpt = Extracto($post_id);  ?>"/></div>
-
            <div class="BloqueB"><input type="text" name="id_imagen_s" id="id_imagen_s" size="45" value="<?php the_post_thumbnail_url("thumbsize"); ?>"/></div>
 
        
@@ -74,6 +73,7 @@ function vimeo_upload_form(){
 ?>
 <b><span style="color:#1abc9c">Mes titulo:</span></b> <br><br>
 <input type="text" name="id_imagen_page" id="id_imagen_page" value="<?php echo $value_id_imagen_page; ?>" style="width: 600px;" /><br><br>
+
 
 
 
@@ -259,7 +259,6 @@ function vimeo_upload_form(){
 
 
 
-
 <b><span style="color:#1abc9c">Tamaño de Bloque:</span></b> <br><br>
 <select name="id_tamano_bloque" id="id_tamano_bloque">
   <option  value=""     <?php selected($value_id_tamano_bloque, 'Normal' ); ?>>Normal</option>
@@ -272,6 +271,17 @@ function vimeo_upload_form(){
 
 <b><span style="color:#1abc9c">Extracto:</span></b> <br><br>
 <input type="text" name="id_post_extracto" id="id_post_extracto" value="<?php echo $excerpt = Extracto($post_id);  ?>" style="width: 600px;" /><br><br>
+
+
+
+<b><span style="color:#1abc9c">Categoría</span></b> <br><br>
+<?php 
+$category = get_the_category(); 
+$name = $category[0]->cat_name;
+ $cat_id = get_cat_ID( $name );
+?>
+<input type="text" name="id_post_categoria" id="id_post_categoria" value="<?php    echo $name;  ?>" style="width: 200px;" /><br><br>
+
 
 
 
@@ -422,6 +432,14 @@ function vimeo_upload_form(){
   if (!$post_id) $post_id = $_POST['post_ID'];
   $var_1 = $_POST['id_post_extracto'];
   update_post_meta($post_id, 'id_post_extracto', $var_1);
+  }
+
+   add_action('save_post', 'post_categoria_func');
+  function post_categoria_func() {
+  global $wpdb, $post;
+  if (!$post_id) $post_id = $_POST['post_ID'];
+  $var_1 = $_POST['id_post_categoria'];
+  update_post_meta($post_id, 'id_post_categoria', $var_1);
   }
 
  
@@ -874,6 +892,32 @@ function slug_get_post_extracto( $post, $field_name, $request ) {
 
 
 function slug_update_post_extracto( $value, $object, $field_name ) {
+    if ( ! $value || ! is_string( $value ) ) { return; }
+    return update_post_meta( $object->ID, $field_name, strip_tags( $value ) );
+}
+
+
+/*------------------------------------------*\
+     REGISTRAMOS POST CATEGORIA
+\*-------------------------------------------*/
+add_action( 'rest_api_init', 'slug_register_id_post_categoria' );
+function slug_register_id_post_categoria() {
+    register_rest_field( 'post',
+        'post_categoria',
+        array(
+            'get_callback'    => 'slug_get_post_categoria',
+            'update_callback' => 'slug_update_post_categoria',
+            'schema'          => null,
+        )
+    );
+}
+
+function slug_get_post_categoria( $post, $field_name, $request ) {
+     return get_post_meta($post['id'], 'id_post_categoria', true);
+}
+
+
+function slug_update_post_categoria( $value, $object, $field_name ) {
     if ( ! $value || ! is_string( $value ) ) { return; }
     return update_post_meta( $object->ID, $field_name, strip_tags( $value ) );
 }
