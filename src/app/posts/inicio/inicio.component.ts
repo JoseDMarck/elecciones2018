@@ -86,6 +86,7 @@ dhms2(t) {
         return [ 
             hours + ' h',
             minutes + ' m'
+
         ].join(' ');
     }
 
