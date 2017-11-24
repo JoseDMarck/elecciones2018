@@ -9,7 +9,11 @@
 <body  [@fadeInAnimation]="stateName">
 
 
-<div class="ScrollPost">
+<div class="ScrollPost" infiniteScroll 
+        [infiniteScrollDistance]="1200"
+        [infiniteScrollThrottle]="1200"
+        (scrolled)="onScroll()"
+        >
 
 
 
@@ -82,10 +86,12 @@
 
   
 
-  <div class="Listado" >
+  <div class="Listado">
+
 
 
  
+
      <div class="BloquesElecciones {{ post.tamano_bloque }}" *ngFor="let post of posts; let i = index; "> 
 
         <div class="ContendorBloquePost">
