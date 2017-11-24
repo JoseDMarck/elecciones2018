@@ -55,7 +55,7 @@ export class InicioComponent implements OnInit {
     this.arregloCountCat = [];
     this.loadMoreVisible = false;
     this.futureString = "July 1, 2018 00:00:00";
- 
+    this.post_count = 20;
    
   }
 
@@ -161,6 +161,34 @@ dhms2(t) {
    //this.router.navigate([slug]);
     console.log("Slug normal", slug)
 }
+
+
+
+onScroll () {
+
+    if (this.post_count <=  90) {
+      this.post_count = this.post_count + 5;
+      console.log('scrolled!!', this.post_count )
+      this.LoadMorePosts(this.post_count)
+    } 
+    else {
+      console.log("Ya llegamos al limite");
+    }
+  }
+
+
+    //LOAD MORE POST
+ LoadMorePosts( numero){
+   
+   console.log("numero load more "+ numero)
+    this.postsService
+      .LoadMorePostsServiceHome(numero)
+      .subscribe(res => {
+        this.posts = res;
+
+      });
+ }
+
 
 
 }
