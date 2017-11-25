@@ -337,6 +337,10 @@ body{
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
+    background: url("assets/images/home/generic.png");
+  background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
 
 }
 
@@ -939,7 +943,10 @@ max-width: 100%;
 .NotasRelacionadas > .BloqueInformacion > .imagen{
   width: 40%;
   height: 160px;
-  background: #bc4;
+  background: url("assets/images/home/generic.png");
+  background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
   float: left;
   overflow: hidden;
 } 
