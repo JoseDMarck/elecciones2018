@@ -13,6 +13,70 @@
 </head>
 <body>
 
+
+
+ <div class="header">
+
+  <div class="logo">
+    <img src="assets/images/home/Elige-2018-logo.png">
+  </div><!-- logo -->
+  
+
+  <div class="menu">
+ 
+<!-- Contador de Bloques -->
+<div class="BloqueContadorDias">
+
+ <div class="texto-A">Faltan</div>
+ <div class="texto-B"> {{dias}} </div>
+ <div class="texto-A">Días</div>
+ <div class="texto-C">{{horas_minutos}}</div>
+
+
+</div><!-- BloqueContador -->
+
+
+
+<div class="Bloques" (click)="GoToInicio();">
+  Menú
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('entrana');" >
+  La Entraña
+</div>
+
+<div class="Bloques">
+  Así pasó
+</div>
+
+<div class="Bloques">
+  ¿Dónde dice?
+</div>
+
+<div class="Bloques">
+  ¿Qué me perdí?
+</div>
+
+<div class="Bloques">
+  ¿Qué proponen?
+</div>
+
+<div class="Bloques">
+  ¿Qué se viene?
+</div>
+
+<div class="Bloques">
+  ¿Quién jalá con quién?
+</div>
+
+
+<div style="clear: both;"></div>
+</div><!-- menu -->
+
+
+</div><!-- header -->
+
+
 <div class="contenidoPost flexcroll-Amarillo" *ngIf="post">
   
 <!-- Imagen del post -->
