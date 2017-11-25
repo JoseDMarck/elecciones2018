@@ -91,8 +91,7 @@
 
 
  
-
-     <div class="BloquesElecciones {{ post.tamano_bloque }}" *ngFor="let post of posts; let i = index; "> 
+     <div class="BloquesElecciones {{ post.tamano_bloque }}" *ngFor="let post of posts; let i = index; " (click)="selectPost(post.slug)"> 
 
         <div class="ContendorBloquePost">
           <div class="imagen">
