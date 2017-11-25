@@ -2,6 +2,7 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 import { Post } from '../post';
 import { PostsService } from '../posts.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { trigger, state, style, animate,transition } from '@angular/animations';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Observable, Subscription } from 'rxjs/Rx';
 
@@ -11,12 +12,25 @@ import { Observable, Subscription } from 'rxjs/Rx';
   selector: 'app-post-single',
   templateUrl: './post-single.component.html',
   styleUrls: ['./post-single.component.css'],
+  animations: [
+    trigger('fadeInAnimation', [
+      state('show', style({
+        opacity: 1
+      })),
+      state('hide',   style({
+        opacity: 0
+      })),
+      transition('show => hide', animate('600ms ease-out')),
+      transition('hide => show', animate('800ms ease-in'))
+    ])
+  ],
   providers: [PostsService]
 })
 
 export class PostSingleComponent implements OnInit {
 
-	 post: Post;
+	  post: Post;
+    post_related: Post;
     private future: Date;
     private futureString: string;
     private diff: number;
@@ -27,10 +41,11 @@ export class PostSingleComponent implements OnInit {
     private dias: string;
     private horas_minutos: string;
 
-
-  show = false;  
+ 
+  show = false; 
   posts_Home: Post[];
   posts: Post[];
+  posts_related: Post[];
   
 
   categorias: Post[];
@@ -92,9 +107,22 @@ dhms2(t) {
       });
   }
 
+  getPostRelated(){
+    this.postsService
+      .getPostsRelated()
+      .subscribe(res => {
+        this.posts_related = res;
+
+        console.log(this.posts_related)
+         //this.imageX = this.sanitizer.bypassSecurityTrustStyle(`url(${element.image})`);
+      });
+  }
+
 
   ngOnInit() {
-  
+    
+    this.getPostRelated();
+
   	this.route.params.forEach((params: Params) => {
        let slug = params['slug'];
        this.getPost(slug)
@@ -117,6 +145,27 @@ dhms2(t) {
 
   }
 
+
+  //ANIMACION TOGGLE
+    get stateName() {
+        return this.show ? 'show' : 'hide'
+     }
+     
+  toggle() {
+        this.show = !this.show;
+    }
+
+
+  ngAfterViewInit() {
+   
+   console.log("estoy  en ngAfterViewInit")
+   setTimeout(() => { 
+     this.toggle()
+   }, 300); // Or however long you need the delay to be
+  
+
+  }
+
   GoToInicio() {
      this.router.navigate([""]);
     console.log("Go to Inicio")
@@ -126,6 +175,13 @@ dhms2(t) {
   SeleccionMenu(slug:string ) {
      this.router.navigate(["publicaciones-"+slug]);
   }
+
+
+  selectPost(slug) {
+   this.router.navigate([slug]);
+   console.log("Slug normal", slug)
+  }
+
 
 
 }
