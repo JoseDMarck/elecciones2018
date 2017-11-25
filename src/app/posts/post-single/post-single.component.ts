@@ -54,6 +54,7 @@ export class PostSingleComponent implements OnInit {
   categoriasCount:any;
   arregloCountCat:any;
   categoria:any;
+  current_id:any;
   imageX:any;
   loadMoreVisible : boolean;
   selectedClass: number;
@@ -106,15 +107,17 @@ dhms2(t) {
         this.post = res[0];
         console.log("Post", this.post)
          this.categoria = res[0].categories;
+         this.current_id = res[0].id;
          console.log("CATEGORIA", this.categoria)
-         this.getPostRelated(this.categoria);
+         console.log("CURRENT ID", this.current_id)
+         this.getPostRelated(this.categoria, this.current_id);
    
       });
   }
 
-  getPostRelated(cat){
+  getPostRelated(cat, current_id){
     this.postsService
-      .getPostsRelated(cat)
+      .getPostsRelated(cat, current_id)
       .subscribe(res => {
         this.posts_related = res;
 
