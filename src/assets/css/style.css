@@ -150,8 +150,8 @@ body{
 }
 
 
-::-moz-selection { background: #00b7ff; }
-::selection { background: #00b7ff; }
+::-moz-selection { background: #CF0C00; }
+::selection { background: #CF0C00; }
 
 
 /*------------------------------------*\
@@ -289,6 +289,7 @@ body{
   height: auto;
   float: left;
   margin-bottom: 40px; 
+  cursor: pointer;
 }
 
 
@@ -699,6 +700,14 @@ transform: scale(1.1,1.1); /* Standard syntax */
 /* --------------------------------------------------------
 /* ---- INSIDE POSTS
 -------------------------------------------------------- */
+.BloqueMainPost{
+  max-width: 1600px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background-color: #bc4b4b;
+}
+
 .Seccion-titulo{
   width: 100%;
   height: auto;
@@ -746,9 +755,9 @@ transform: scale(1.1,1.1); /* Standard syntax */
 .Seccion-titulo > .BloqueDatos > .autor{
  width: 100%;
   height: auto;
-  font-family: "Roboto-Light";
-  font-size: 21px;
-  line-height: 21px; 
+   font-family: "Gotham-Medium";
+  font-size: 18px;
+  line-height: 18px; 
   margin-bottom: 20px;
   color: #000;
 } 
@@ -756,9 +765,9 @@ transform: scale(1.1,1.1); /* Standard syntax */
 .Seccion-titulo > .BloqueDatos > .fecha{
  width: 100%;
   height: auto;
-  font-family: "Roboto-Light";
-  font-size: 21px;
-  line-height: 21px; 
+  font-family: "Gotham-Medium";
+  font-size: 20px;
+  line-height: 20px; 
   margin-bottom: 5px;
   color: #000;
   text-transform: lowercase;
@@ -766,21 +775,21 @@ transform: scale(1.1,1.1); /* Standard syntax */
 
 
 .Seccion-titulo > .BloqueDatos > .titulo{
-  font-family: "Roboto-Bold-Italic";
+  font-family: "Gotham-Black";
   font-size: 40px;
   line-height: 40px;
   margin-bottom: 10px;
 } 
 
 .Seccion-titulo > .BloqueDatos > .lugar{
-   font-family: "Roboto-Light";
+   font-family: "Gotham-Medium";
   font-size: 28px;
   line-height: 28px;
   margin-bottom: 10px;
 } 
 
 .Seccion-titulo > .BloqueDatos > .hora{
-  font-family: "Roboto-Bold";
+  font-family: "Gotham-Medium";
   font-size: 24px;
   line-height: 24px;
   margin-bottom: 10px;
@@ -805,14 +814,14 @@ transform: scale(1.1,1.1); /* Standard syntax */
  
 
 .contenidoPost{
-  width: 80%;
+  width: 70%;
   height: auto;
   position: relative;
   overflow-y:  hidden;
   overflow-x: hidden;
   padding-top: 30px;
   margin: 0 auto;
-  float: right;
+  float: left;
 } 
 
 
@@ -820,14 +829,14 @@ transform: scale(1.1,1.1); /* Standard syntax */
   max-width: 1024px;
   width: 100%;
   height: auto;
-  font-family: "Roboto-Bold";
-  font-size:16px;
-  line-height: 20px;
+  font-family: "Gotham-Light";
+  font-size: 20px;
+  line-height: 28px;
 } 
 
 
 .contenidoPost a{
-  color: #ff00a1;
+  color: #CF0C00;
   text-decoration: none;
 
      -webkit-transition: all 0.3s ease;
@@ -870,6 +879,103 @@ max-width: 100%;
 
 
 /* --------------------------------------------------------
+/* ---- NOTAS RELACIONADAS  
+-------------------------------------------------------- */
+
+.NotasRelacionadas{
+  width: 30%;
+  height: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #000;
+  float: left;
+  color: #FFF;
+  margin-top: 140px;
+}
+
+.NotasRelacionadas > .SeccionTitulo{
+    font-family: "Gotham-Black";
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.NotasRelacionadas > .barra{
+  width: 70%;
+  height: 10px;
+  margin: 0 auto;
+  background-color:  #CF0C00;
+  margin-bottom: 30px;
+}
+
+.NotasRelacionadas > .BloqueInformacion{
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  background:   #343a40;
+
+   -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    cursor: pointer;
+
+}
+
+.NotasRelacionadas > .BloqueInformacion:hover{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    background:  #CF0C00;
+
+}
+
+
+.NotasRelacionadas > .BloqueInformacion > .imagen{
+  width: 40%;
+  height: 160px;
+  background: #bc4;
+  float: left;
+  overflow: hidden;
+} 
+
+.NotasRelacionadas > .BloqueInformacion > .imagen img{
+  width: 150%;
+  height: auto;
+}
+
+.NotasRelacionadas > .BloqueInformacion > .informacion{
+  width: 60%;
+  height: 160px;
+
+  float: left;
+  padding: 5px;
+} 
+
+
+.NotasRelacionadas > .BloqueInformacion > .informacion > .titulo{
+  width: 100%;
+  height: auto;
+  font-family: "Gotham-Black";
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.NotasRelacionadas > .BloqueInformacion > .informacion > .extracto{
+  width: 100%;
+  height: auto;
+  font-family: "Gotham-Light";
+  font-size: 14px;
+  line-height: 14px;
+}
+
+/* --------------------------------------------------------
 /* ---- POST LIST HOME  
 -------------------------------------------------------- */
 
@@ -895,8 +1001,6 @@ filter: grayscale(0%);
 -o-transition: all 0.5s ease;
 -ms-transition: all 0.5s ease;
 }
-
-
 
 
 
