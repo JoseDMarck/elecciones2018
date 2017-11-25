@@ -190,7 +190,7 @@ body{
   color: #FFF;
   text-align: center;
   text-transform: uppercase;
-  padding-left: 80px;
+  padding-left: 0px;
   margin-bottom: 60px;
   position: relative;
 }
@@ -202,7 +202,7 @@ body{
   padding-left: 10px;
   padding-right: 10px;
   float: left;
-  margin-left: 15px;
+  margin-left: 0px;
   background: #000;
   cursor: pointer;
   -webkit-transition: all 0.5s ease;
