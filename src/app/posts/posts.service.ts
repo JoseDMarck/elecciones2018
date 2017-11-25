@@ -24,9 +24,9 @@ private postsUrl = "http://meditarensupabra.com/demos/AudiosCDO/wp-json/wp/v2/";
   }
 
 
-  getPostsRelated(id_cat): Observable<Post[]> {
+  getPostsRelated(id_cat, current_id): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories='+id_cat+'&per_page=5&order=asc')
+        .get(this.postsUrl + 'posts?categories='+id_cat+'&per_page=5&order=desc&exclude='+current_id)
         .map((res: Response) => res.json());
   }
 
