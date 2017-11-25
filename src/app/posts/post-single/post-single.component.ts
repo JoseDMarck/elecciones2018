@@ -122,4 +122,10 @@ dhms2(t) {
     console.log("Go to Inicio")
   }
 
+
+  SeleccionMenu(slug:string ) {
+     this.router.navigate(["publicaciones-"+slug]);
+  }
+
+
 }
