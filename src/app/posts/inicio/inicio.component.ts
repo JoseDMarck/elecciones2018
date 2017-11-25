@@ -165,6 +165,13 @@ dhms2(t) {
 
 
 
+
+
+GoToInicio() {
+ this.router.navigate([""]);
+    console.log("Go to Inicio")
+}
+
 onScroll () {
 
     if (this.post_count <=  90) {
