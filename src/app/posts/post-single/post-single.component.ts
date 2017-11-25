@@ -41,6 +41,7 @@ export class PostSingleComponent implements OnInit {
     private dias: string;
     private horas_minutos: string;
 
+
  
   show = false; 
   posts_Home: Post[];
@@ -52,6 +53,7 @@ export class PostSingleComponent implements OnInit {
   post_count:number;
   categoriasCount:any;
   arregloCountCat:any;
+  categoria:any;
   imageX:any;
   loadMoreVisible : boolean;
   selectedClass: number;
@@ -103,13 +105,16 @@ dhms2(t) {
       .subscribe(res => {
         this.post = res[0];
         console.log("Post", this.post)
+         this.categoria = res[0].categories;
+         console.log("CATEGORIA", this.categoria)
+         this.getPostRelated(this.categoria);
    
       });
   }
 
-  getPostRelated(){
+  getPostRelated(cat){
     this.postsService
-      .getPostsRelated()
+      .getPostsRelated(cat)
       .subscribe(res => {
         this.posts_related = res;
 
@@ -120,8 +125,7 @@ dhms2(t) {
 
 
   ngOnInit() {
-    
-    this.getPostRelated();
+   
 
   	this.route.params.forEach((params: Params) => {
        let slug = params['slug'];
@@ -150,13 +154,16 @@ dhms2(t) {
     get stateName() {
         return this.show ? 'show' : 'hide'
      }
-     
+
   toggle() {
         this.show = !this.show;
     }
 
 
   ngAfterViewInit() {
+
+    
+
    
    console.log("estoy  en ngAfterViewInit")
    setTimeout(() => { 
