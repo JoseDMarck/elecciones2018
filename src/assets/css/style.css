@@ -227,6 +227,11 @@ body{
 }
 
 
+.BloqueCurrent{
+  background: #CF0C00 !important;
+}
+
+
 .BloqueContadorDias{
   position: absolute;
   right: 12%;
