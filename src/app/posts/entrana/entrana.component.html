@@ -34,16 +34,21 @@
  <div class="texto-A">Días</div>
  <div class="texto-C">{{horas_minutos}}</div>
  
-
-
-
-
-
-
-
+ 
 </div><!-- BloqueContador -->
 
 
+
+<!-- MENU MOVIL ================== -->
+<div class="menuMovil">
+  <div class="menuIcon" (click)="toggle2()"></div>
+</div><!-- menuMovil -->
+
+<div class="Menu-Activo-Movil" [@heroState2]="stateName2" >
+
+</div><!--Menu-Activo-Movil -->
+
+<!-- MENU MOVIL ================== -->
 
 <div class="Bloques" (click)="GoToInicio()">
   Inicio
