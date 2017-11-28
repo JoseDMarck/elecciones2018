@@ -830,7 +830,7 @@ transform: scale(1.1,1.1); /* Standard syntax */
 
 
  
-.Post_Redered p{
+.Post_Redered {
   max-width: 1024px;
   width: 100%;
   height: auto;

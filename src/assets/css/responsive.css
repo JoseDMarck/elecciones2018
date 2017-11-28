@@ -257,7 +257,17 @@
     float: none;
     color: #FFF;
     margin-top: 40px;
+    background: rgb(235, 235, 235) !important;
 }
+
+
+ 
+
+.NotasRelacionadas > .SeccionTitulo {
+     color: #000;
+}
+
+
 
 .NotasRelacionadas > .BloqueInformacion {
     width: 50%;
@@ -365,6 +375,18 @@
     line-height: 16px;
 }
 
+.contenidoPost {
+    width: 100%;
+    float: none;
+}
+
+
+.Seccion-titulo > .BloqueDatos {
+    width: 100%;
+    height: auto;
+    padding-left: 0px;  
+    float: left;
+}
 
 
 
@@ -378,10 +400,7 @@
 
 @media only screen and (max-width:911px) {
 
-.contenidoPost {
-    width: 95%;
-    float: none;
-}
+
 
   .NotasRelacionadas > .BloqueInformacion > .informacion > .extracto {
     font-size: 12px;
@@ -423,7 +442,24 @@
 
 @media only screen and (max-width:860px) {
 
+
+  .Seccion-titulo > .BloqueDatos > .titulo {
+    font-family: "Gotham-Black";
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 10px;
+}
+
+.Seccion-titulo > .BloqueDatos > .fecha {
+    font-size: 16px;
+    line-height: 16px;
+}
  
+.Seccion-titulo > .BloqueDatos > .autor {
+    font-size: 16px;
+    line-height: 16px;
+}
+
  .ContendorBloquePost > .imagen{
   width: 100%;
   height: 200px;
@@ -437,17 +473,30 @@
 
 
  
+
+
+ 
 .NotasRelacionadas > .BloqueInformacion {
     width: 100%;
     float: left;
     height: 170px;
     overflow: hidden;
+
 }
 
   .NotasRelacionadas > .BloqueInformacion > .informacion > .extracto {
     font-size: 14px;
     line-height: 14px;
 }
+
+
+
+.Post_Redered {
+    font-size: 18px;
+    line-height: 28px;
+    color: #000;
+}
+
 
 
 }/* 900 */
@@ -523,6 +572,21 @@
     width: 100%;
 }
 
+.NotasRelacionadas {
+    width: 90%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #000;
+    float: none;
+    color: #FFF;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.NotasRelacionadas > .BloqueInformacion {
+    height: auto;
+}
 
 .NotasRelacionadas > .BloqueInformacion > .imagen{
     width: 100%;
