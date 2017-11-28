@@ -275,6 +275,16 @@ body{
   text-transform: lowercase;
 } 
 
+
+.menuMovil{
+  width: 100%;
+  height: 40px;
+  background: #000;
+  display: none;
+}
+
+
+
 /* --------------------------------------------------------
 /* ---- SECCION PARA POST 
 -------------------------------------------------------- */

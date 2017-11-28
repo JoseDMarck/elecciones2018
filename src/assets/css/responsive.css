@@ -389,6 +389,31 @@
 }
 
 
+.BloqueContadorDias{
+    position: absolute;
+    right: 12%;
+    top: -160px;
+    width: 144px;
+    height: 162px;
+    background-color: #000;
+}
+
+
+ 
+.BloqueContadorDias  > .texto-A {
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.BloqueContadorDias  > .texto-B  {
+    font-size: 42px;
+    line-height: 42px;
+}
+
+.header > .logo  {
+    width: 350px;
+}
+
 
 
 }/* 1024 */
@@ -398,14 +423,24 @@
 /* ---- Responsive: 911px
 -------------------------------------------------------- */
 
-@media only screen and (max-width:911px) {
+@media only screen and (max-width:1000px) {
 
-
+.menu  > .Bloques {
+    margin-left: 0px;
+    display: none;
+}
 
   .NotasRelacionadas > .BloqueInformacion > .informacion > .extracto {
     font-size: 12px;
     line-height: 12px;
 }
+
+
+
+.menuMovil{
+  display: block;
+}
+
 
 
 }
