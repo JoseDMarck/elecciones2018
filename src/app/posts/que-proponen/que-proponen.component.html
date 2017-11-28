@@ -1,3 +1,142 @@
-<p>
-  que-proponen works!
-</p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="assets/bootstrap-4.0.0-beta-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body  >
+
+
+<div class="ScrollPost" infiniteScroll 
+        [infiniteScrollDistance]="1200"
+        [infiniteScrollThrottle]="1200"
+        (scrolled)="onScroll()"
+        >
+
+
+
+  <div class="header">
+
+  <div class="logo" (click)="GoToInicio()">
+    <img src="assets/images/home/Elige-2018-logo.png">
+  </div><!-- logo -->
+  
+
+  <div class="menu">
+ 
+<!-- Contador de Bloques -->
+<div class="BloqueContadorDias">
+
+ <div class="texto-A">Faltan</div>
+ <div class="texto-B"> {{dias}} </div>
+ <div class="texto-A">Días</div>
+ <div class="texto-C">{{horas_minutos}}</div>
+ 
+
+
+
+
+
+
+
+</div><!-- BloqueContador -->
+
+
+
+<div class="Bloques" (click)="GoToInicio()">
+  Inicio
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('entrana');">
+  La Entraña
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('asi-paso');">
+  Así pasó
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('donde-dice');">
+  ¿Dónde dice?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-me-perdi');">
+  ¿Qué me perdí?
+</div>
+
+<div class="Bloques BloqueCurrent" (click)="SeleccionMenu('que-proponen');">
+  ¿Qué proponen?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-se-viene');">
+  ¿Qué se viene?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('quien-jala');">
+  ¿Quién jalá con quién?
+</div>
+
+
+<div style="clear: both;"></div>
+</div><!-- menu -->
+
+
+</div><!-- header -->
+
+  
+
+  <div class="Listado" [@fadeInAnimation]="stateName">
+
+
+
+ 
+
+     <div class="BloquesElecciones {{ post.tamano_bloque }}" *ngFor="let post of posts; let i = index; " (click)="selectPost(post.slug)"> 
+
+        <div class="ContendorBloquePost">
+          <div class="imagen">
+
+            
+            <div class="fecha">
+              <div class="mes">{{ post.post_fecha_mes}}</div>
+              <div class="dia">{{ post.post_fecha_dia}}</div>
+            </div>
+
+            <img src="{{ post.imagen_normalsize }}" >  
+          </div>
+
+          <div class="titulo">
+            {{ post.title.rendered }}
+          </div>
+
+           <div class="categoria">
+             {{post.post_categoria}}
+          </div>
+
+          <div [innerHTML]="post.custom_extracto" class="extracto"></div>
+
+        </div>
+
+     </div><!--BloquesElecciones  -->
+
+
+  <div style="clear: both;"></div>
+  </div><!-- Listado -->
+   
+
+ 
+</div><!--scrollPost END -->
+
+
+
+ 
+</body>
+<link rel="stylesheet" href="assets/css/responsive.css">
+</html>
+
+
+
+
+
+ 
