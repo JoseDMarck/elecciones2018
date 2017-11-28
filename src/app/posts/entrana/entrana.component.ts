@@ -159,9 +159,8 @@ dhms2(t) {
 
 
  selectPost(slug) {
-	 this.router.navigate(["publicaciones/"+slug]);
-   //this.router.navigate([slug]);
-    console.log("Slug normal", slug)
+   this.router.navigate([slug]);
+   console.log("Slug normal", slug)
 }
 
 
@@ -199,5 +198,8 @@ onScroll () {
  }
 
 
+SeleccionMenu(slug:string ) {
+     this.router.navigate(["publicaciones-"+slug]);
+}
 
 }
