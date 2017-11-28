@@ -412,9 +412,16 @@ private postsUrl = "http://meditarensupabra.com/demos/AudiosCDO/wp-json/wp/v2/";
   }
 
 
-   getPosts_Entrana(): Observable<Post[]> {
+  getPosts_Entrana(): Observable<Post[]> {
       return this.http
         .get(this.postsUrl + 'posts?categories=29&posts_per_page=100&order=desc')
+        .map((res: Response) => res.json());
+  }
+
+
+  getPosts_AsiPaso(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=30&posts_per_page=100&order=desc')
         .map((res: Response) => res.json());
   }
 
