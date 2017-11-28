@@ -17,7 +17,7 @@
 
  <div class="header">
 
-  <div class="logo">
+  <div class="logo" (click)="GoToInicio()">
     <img src="assets/images/home/Elige-2018-logo.png">
   </div><!-- logo -->
   
@@ -38,14 +38,14 @@
 
 
 <div class="Bloques" (click)="GoToInicio();">
-  Menú
+  Inicio
 </div>
 
 <div class="Bloques" (click)="SeleccionMenu('entrana');" >
   La Entraña
 </div>
 
-<div class="Bloques">
+<div class="Bloques" (click)="SeleccionMenu('asi-paso');">
   Así pasó
 </div>
 
