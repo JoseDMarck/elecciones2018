@@ -16,6 +16,8 @@ import { ConferenciasComponent  } from './posts/conferencias/conferencias.compon
 import { PostListEspaciosComponent } from './posts/post-list-espacios/post-list-espacios.component';
 import { EntranaComponent } from './posts/entrana/entrana.component';
 import { InicioComponent } from './posts/inicio/inicio.component';
+import { AsiPasoComponent } from './posts/asi-paso/asi-paso.component';
+
 
 
 
@@ -43,6 +45,12 @@ const routes: Routes = [
   {
     path: 'publicaciones-entrana',
     component: EntranaComponent,
+    pathMatch: 'full'
+  },
+
+  {
+    path: 'publicaciones-asi-paso',
+    component: AsiPasoComponent,
     pathMatch: 'full'
   },
 
@@ -106,6 +114,8 @@ const routes: Routes = [
     component: ConferenciasComponent,
     pathMatch: 'full'
   },
+
+
   {
     path: ':slug',
     component: PostSingleComponent
