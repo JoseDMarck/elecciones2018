@@ -442,6 +442,21 @@
 }
 
 
+.Menu-Activo-Movil{
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  display: block;
+  top: 0;
+  right: 0;
+  z-index: 999999999;
+  background: #FFF;
+  padding-top: 40px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: block;
+}
+
 
 }
 
