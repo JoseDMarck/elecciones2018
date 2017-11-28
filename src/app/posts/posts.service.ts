@@ -425,6 +425,36 @@ private postsUrl = "http://meditarensupabra.com/demos/AudiosCDO/wp-json/wp/v2/";
         .map((res: Response) => res.json());
   }
 
+  getPosts_DondeDice(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=31&posts_per_page=100&order=desc')
+        .map((res: Response) => res.json());
+  }
+
+  getPosts_QueMePerdi(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=32&posts_per_page=100&order=desc')
+        .map((res: Response) => res.json());
+  }
+
+  getPosts_QueProponen(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=33&posts_per_page=100&order=desc')
+        .map((res: Response) => res.json());
+  }
+
+  getPosts_QueSeViene(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=34&posts_per_page=100&order=desc')
+        .map((res: Response) => res.json());
+  }
+
+  getPosts_QuienJala(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=36&posts_per_page=100&order=desc')
+        .map((res: Response) => res.json());
+  }
+
   // LOADMORE HOME
    LoadMorePostsServicebyCategory(cat,numero): Observable<Post[]> {
       return this.http
