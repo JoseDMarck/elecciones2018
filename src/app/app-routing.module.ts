@@ -17,6 +17,11 @@ import { PostListEspaciosComponent } from './posts/post-list-espacios/post-list-
 import { EntranaComponent } from './posts/entrana/entrana.component';
 import { InicioComponent } from './posts/inicio/inicio.component';
 import { AsiPasoComponent } from './posts/asi-paso/asi-paso.component';
+import { DondeDiceComponent } from './posts/donde-dice/donde-dice.component';
+import { QueMePerdiComponent } from './posts/que-me-perdi/que-me-perdi.component';
+import { QueProponenComponent } from './posts/que-proponen/que-proponen.component';
+import { QueSeVieneComponent  } from './posts/que-se-viene/que-se-viene.component';
+import { QuienJalaComponent  } from './posts/quien-jala/quien-jala.component';
 
 
 
@@ -51,6 +56,32 @@ const routes: Routes = [
   {
     path: 'publicaciones-asi-paso',
     component: AsiPasoComponent,
+    pathMatch: 'full'
+  },
+  
+  {
+    path: 'publicaciones-donde-dice',
+    component: DondeDiceComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'publicaciones-que-me-perdi',
+    component: QueMePerdiComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'publicaciones-que-proponen',
+    component: QueProponenComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'publicaciones-que-se-viene',
+    component: QueSeVieneComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'publicaciones-quien-jala',
+    component: QuienJalaComponent,
     pathMatch: 'full'
   },
 

@@ -26,6 +26,11 @@ import { ConferenciasComponent  } from './posts/conferencias/conferencias.compon
 import { InicioComponent } from './posts/inicio/inicio.component';
 import { EntranaComponent } from './posts/entrana/entrana.component';
 import { AsiPasoComponent } from './posts/asi-paso/asi-paso.component';
+import { DondeDiceComponent } from './posts/donde-dice/donde-dice.component';
+import { QueMePerdiComponent } from './posts/que-me-perdi/que-me-perdi.component';
+import { QueProponenComponent } from './posts/que-proponen/que-proponen.component';
+import { QueSeVieneComponent  } from './posts/que-se-viene/que-se-viene.component';
+import { QuienJalaComponent  } from './posts/quien-jala/quien-jala.component';
 import {ShareModule} from 'ng2share/share.module'
 
 import { MenuGeneralComponent } from './posts/menu-general/menu-general.component';
@@ -60,6 +65,11 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     ConferenciasComponent,
     EntranaComponent,
     AsiPasoComponent,
+    DondeDiceComponent,
+    QueMePerdiComponent,
+    QueProponenComponent,
+    QueSeVieneComponent,
+    QuienJalaComponent, 
     CeiboShare,
     PostListEspaciosComponent
   ],
