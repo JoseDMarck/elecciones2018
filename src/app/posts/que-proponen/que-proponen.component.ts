@@ -27,7 +27,7 @@ import { Observable, Subscription } from 'rxjs/Rx';
 })
 export class QueProponenComponent implements OnInit {
 
-  private future: Date;
+ 	private future: Date;
     private futureString: string;
     private diff: number;
     private $counter: Observable<number>;
