@@ -710,7 +710,6 @@ transform: scale(1.1,1.1); /* Standard syntax */
   width: 100%;
   height: auto;
   margin: 0 auto;
-  background-color: #bc4b4b;
 }
 
 .Seccion-titulo{
@@ -830,15 +829,15 @@ transform: scale(1.1,1.1); /* Standard syntax */
 } 
 
 
-.contenidoPost p{
+ 
+.Post_Redered p{
   max-width: 1024px;
   width: 100%;
   height: auto;
   font-family: "Gotham-Light";
   font-size: 20px;
   line-height: 28px;
-} 
-
+}
 
 .contenidoPost a{
   color: #CF0C00;
