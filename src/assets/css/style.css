@@ -281,9 +281,26 @@ body{
   height: 40px;
   background: #000;
   display: none;
+ 
+  
 }
 
 
+.menuMovil >.menuIcon{
+  width: 32px;
+  height: 32px;
+  background: url("assets/images/home/menuIcon.png");
+  background-size: 32px 32px; 
+  position: relative;
+  top: 4px;
+  left:7px;
+}
+
+ 
+
+.Menu-Activo-Movil{
+  display: none;
+}
 
 /* --------------------------------------------------------
 /* ---- SECCION PARA POST 
