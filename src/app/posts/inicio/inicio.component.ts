@@ -20,7 +20,16 @@ import { Observable, Subscription } from 'rxjs/Rx';
       })),
       transition('show => hide', animate('600ms ease-out')),
       transition('hide => show', animate('800ms ease-in'))
-    ])
+    ]),
+
+    trigger('heroState2', [
+    state('inactive', style({transform: 'translateX(-200%)  '})),
+    state('active',   style({transform: 'translateX(-100%) '})),
+    
+    transition('inactive => active', animate('400ms ease-in')),
+    transition('active => inactive', animate('200ms ease-out')),
+     
+  ])
   ],
   providers: [PostsService]
 })
@@ -50,12 +59,14 @@ export class InicioComponent implements OnInit {
   imageX:any;
   loadMoreVisible : boolean;
   selectedClass: number;
+  show2 = true;
 
   constructor(private postsService: PostsService, private router: Router,  private sanitizer: DomSanitizer, elm: ElementRef) { 
     this.arregloCountCat = [];
     this.loadMoreVisible = false;
     this.futureString = "July 1, 2018 00:00:00";
     this.post_count = 20;
+
    
   }
 
@@ -114,6 +125,17 @@ dhms2(t) {
 
     toggle() {
         this.show = !this.show;
+    }
+
+
+    //ANIMACIÓN PARA EL MENU
+    get stateName2() {
+          return this.show2 ? 'inactive' : 'active'
+    }
+
+    toggle2() {
+          this.show2 = !this.show2;
+          console.log("this.show", this.show2)
     }
 
 
