@@ -23,6 +23,7 @@ import { Observable, Subscription } from 'rxjs/Rx';
     ]),
 
     trigger('heroState2', [
+
     state('inactive', style({transform: 'translateX(-200%)  '})),
     state('active',   style({transform: 'translateX(-100%) '})),
     
@@ -135,7 +136,7 @@ dhms2(t) {
 
     toggle2() {
           this.show2 = !this.show2;
-          console.log("this.show", this.show2)
+          console.log("this.show2", this.show2)
     }
 
 
