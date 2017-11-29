@@ -24,7 +24,7 @@ import { Observable, Subscription } from 'rxjs/Rx';
     ]),
 
     trigger('heroState2', [
-    state('inactive', style({transform: 'translateX(-200%)  '})),
+    state('inactive', style({transform: 'translateX(0)  '})),
     state('active',   style({transform: 'translateX(-100%) '})),
     
     transition('inactive => active', animate('400ms ease-in')),
@@ -132,12 +132,12 @@ dhms2(t) {
 
     //ANIMACIÓN PARA EL MENU
     get stateName2() {
-          return this.show2 ? 'inactive' : 'active'
+        return this.show2 ? 'inactive' : 'active'
     }
 
     toggle2() {
-          this.show2 = !this.show2;
-          console.log("this.show", this.show2)
+        this.show2 = !this.show2;
+         console.log("this.show", this.show2)
     }
 
 

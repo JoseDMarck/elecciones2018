@@ -40,15 +40,51 @@
 
 
 <!-- MENU MOVIL ================== -->
-<div class="menuMovil">
-  <div class="menuIcon" (click)="toggle2()"></div>
+<div class="menuMovil" (click)="toggle2()">
+  <div class="menuIcon"></div>
 </div><!-- menuMovil -->
 
 <div class="Menu-Activo-Movil" [@heroState2]="stateName2" >
 
+  <div class="btn_Close" (click)="toggle2()"></div>
+
+<div class="Bloques" (click)="GoToInicio()">
+  Inicio
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('entrana');">
+  La Entraña
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('asi-paso');">
+  Así pasó
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('donde-dice');">
+  ¿Dónde dice?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-me-perdi');">
+  ¿Qué me perdí?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-proponen');">
+  ¿Qué proponen?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-se-viene');">
+  ¿Qué se viene?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('quien-jala');">
+  ¿Quién jalá con quién?
+</div>
+
 </div><!--Menu-Activo-Movil -->
 
 <!-- MENU MOVIL ================== -->
+
+
 
 <div class="Bloques" (click)="GoToInicio()">
   Inicio
