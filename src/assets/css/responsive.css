@@ -443,18 +443,41 @@
 
 
 .Menu-Activo-Movil{
-  width: 50%;
+  width: 300px;
   height: 100%;
   position: fixed;
   display: block;
   top: 0;
-  right: 0;
+  left:  0;
   z-index: 999999999;
   background: #FFF;
   padding-top: 40px;
   overflow-x: hidden;
   overflow-y: scroll;
   display: block;
+  background: rgba(0,0,0,0.9);
+}
+
+
+.Menu-Activo-Movil > .Bloques{
+  width: 100%;
+  height: auto;
+  padding-top:  5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.Menu-Activo-Movil > .btn_Close{
+  width: 32px;
+  height: 32px;
+  background: url("assets/images/home/close.png");
+  background-size: 32px 32px;
+  position: absolute;
+  top: 5px;
+  right: 5px; 
 }
 
 
