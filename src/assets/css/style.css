@@ -282,7 +282,6 @@ body{
   background: #000;
   display: none;
  
-  
 }
 
 
@@ -301,6 +300,51 @@ body{
 .Menu-Activo-Movil{
   display: none;
 }
+
+
+.BloqueContadorDiasMovil{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background-color: #000;
+  display: none;
+  font-family: "Gotham-Black";
+  font-size: 18px;
+  line-height: 18px;
+  color: #FFF;
+  padding: 5px;
+}
+
+
+
+
+.BloqueContadorDiasMovil > .texto-1{
+  font-family: "Gotham-Medium";
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: lowercase;
+   color: #808080;
+} 
+
+.BloqueContadorDiasMovil > .texto-2{
+   font-family: "Gotham-Black";
+   font-size: 14px;
+  line-height: 14px;
+   color: #808080;
+} 
+
+.BloqueContadorDiasMovil > .texto-3{
+   font-family: "Gotham-Black";
+   font-size: 14px;
+  line-height: 14px;
+  color: #808080;
+  text-transform: lowercase;
+} 
+
+ 
+
 
 /* --------------------------------------------------------
 /* ---- SECCION PARA POST 

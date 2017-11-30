@@ -624,6 +624,10 @@
     display: none;
  }
 
+ .BloqueContadorDiasMovil{
+  display: block;
+ }
+
  .header  > .logo  {
     width: 280px;
 }

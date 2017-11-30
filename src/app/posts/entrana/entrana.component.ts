@@ -24,7 +24,7 @@ import { Observable, Subscription } from 'rxjs/Rx';
     ]),
 
     trigger('heroState2', [
-    state('inactive', style({transform: 'translateX(0)  '})),
+    state('inactive', style({transform: 'translateX(0)'})),
     state('active',   style({transform: 'translateX(-100%) '})),
     
     transition('inactive => active', animate('400ms ease-in')),
