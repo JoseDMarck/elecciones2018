@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body  >
+<body>
 
 
 <div class="ScrollPost" infiniteScroll 
@@ -18,6 +18,8 @@
 
 
   <div class="header">
+
+   <div class="menuIcon" (click)="toggle2()"></div>
 
   <div class="logo">
     <img src="assets/images/home/Elige-2018-logo.png">
@@ -39,12 +41,59 @@
 </div><!-- BloqueContador -->
 
 
-<!-- MENU MOVIL ================== -->
+ <!-- MENU MOVIL ================== -->
 <div class="menuMovil">
-  <div class="menuIcon" (click)="toggle2()"></div>
+  
 </div><!-- menuMovil -->
 
 <div class="Menu-Activo-Movil" [@heroState2]="stateName2" >
+
+  <div class="btn_Close" (click)="toggle2()"></div>
+
+<div class="Bloques" (click)="GoToInicio()">
+  Inicio
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('entrana');">
+  La Entraña
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('asi-paso');">
+  Así pasó
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('donde-dice');">
+  ¿Dónde dice?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-me-perdi');">
+  ¿Qué me perdí?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-proponen');">
+  ¿Qué proponen?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-se-viene');">
+  ¿Qué se viene?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('quien-jala');">
+  ¿Quién jalá con quién?
+</div>
+
+<!-- Contador de Bloques -->
+<div class="BloqueContadorDiasMovil">
+
+<span class="texto-1"> Faltan: </span> 
+<span class="texto-2">{{dias}}</span> 
+<span class="texto-1"> Días  y </span> 
+<span class="texto-3">{{horas_minutos}}</span>
+  
+ 
+ 
+</div><!-- BloqueContador -->
+
 
 </div><!--Menu-Activo-Movil -->
 

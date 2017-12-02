@@ -29,7 +29,6 @@ import { Observable, Subscription } from 'rxjs/Rx';
     
     transition('inactive => active', animate('400ms ease-in')),
     transition('active => inactive', animate('200ms ease-out')),
-     
     ])
 
 

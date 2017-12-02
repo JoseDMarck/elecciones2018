@@ -22,6 +22,15 @@ import { Observable, Subscription } from 'rxjs/Rx';
       })),
       transition('show => hide', animate('600ms ease-out')),
       transition('hide => show', animate('800ms ease-in'))
+    ]),
+
+    trigger('heroState2', [
+    state('inactive', style({transform: 'translateX(0)'})),
+    state('active',   style({transform: 'translateX(-100%) '})),
+    
+    transition('inactive => active', animate('400ms ease-in')),
+    transition('active => inactive', animate('200ms ease-out')),
+     
     ])
   ],
   providers: [PostsService]
@@ -40,6 +49,7 @@ export class QueMePerdiComponent implements OnInit {
 
 
   show = false;  
+  show2 = false; 
   posts_Home: Post[];
   posts: Post[];
   
@@ -115,6 +125,16 @@ dhms2(t) {
 
     toggle() {
         this.show = !this.show;
+    }
+
+    //ANIMACIÓN PARA EL MENU
+    get stateName2() {
+        return this.show2 ? 'inactive' : 'active'
+    }
+
+    toggle2() {
+        this.show2 = !this.show2;
+         console.log("this.show", this.show2)
     }
 
 

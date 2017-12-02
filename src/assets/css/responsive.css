@@ -441,6 +441,10 @@
   display: block;
 }
 
+.menuIcon{
+  display: block;
+}
+
 .header {
     margin-top: 20px;
 }
