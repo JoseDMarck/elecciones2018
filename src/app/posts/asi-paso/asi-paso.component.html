@@ -145,8 +145,9 @@
   <div class="Listado" [@fadeInAnimation]="stateName">
 
 
-
- 
+    <div class="texto_publicaciones">
+      Publicaciones de: <br> <span>Así paso</span>
+    </div><!-- texto_publicaiones -->
 
      <div class="BloquesElecciones {{ post.tamano_bloque }}" *ngFor="let post of posts; let i = index; " (click)="selectPost(post.slug)"> 
 

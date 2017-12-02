@@ -17,6 +17,8 @@
 
  <div class="header">
 
+  <div class="menuIcon" (click)="toggle2()"></div>
+
   <div class="logo" (click)="GoToInicio()">
     <img src="assets/images/home/Elige-2018-logo.png">
   </div><!-- logo -->
@@ -34,6 +36,65 @@
 
 
 </div><!-- BloqueContador -->
+
+
+
+<!-- MENU MOVIL ================== -->
+<div class="menuMovil">
+  
+</div><!-- menuMovil -->
+
+<div class="Menu-Activo-Movil" [@heroState2]="stateName2" >
+
+  <div class="btn_Close" (click)="toggle2()"></div>
+
+<div class="Bloques" (click)="GoToInicio()">
+  Inicio
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('entrana');">
+  La Entraña
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('asi-paso');">
+  Así pasó
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('donde-dice');">
+  ¿Dónde dice?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-me-perdi');">
+  ¿Qué me perdí?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-proponen');">
+  ¿Qué proponen?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-se-viene');">
+  ¿Qué se viene?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('quien-jala');">
+  ¿Quién jalá con quién?
+</div>
+
+<!-- Contador de Bloques -->
+<div class="BloqueContadorDiasMovil">
+
+<span class="texto-1"> Faltan: </span> 
+<span class="texto-2">{{dias}}</span> 
+<span class="texto-1"> Días  y </span> 
+<span class="texto-3">{{horas_minutos}}</span>
+  
+
+</div><!-- BloqueContador -->
+
+
+</div><!--Menu-Activo-Movil -->
+
+<!-- MENU MOVIL ================== -->
 
 
 
@@ -105,16 +166,11 @@
  <div class="CompartirTexto">
  	Compartir:
  </div>
- <share-container
-    direction="horizontal"
-    addedText=""
-    [expandable]="true"
-    [textEnabled]="true"
-    [platforms]="['twitter','facebook', 'googlePlus']">
-    </share-container>
+ 
+ <button class="facebook" ceiboShare  [facebook]="{u: repoUrl}">Facebook</button>
+<button class="twitter" ceiboShare  [twitter]="{url:repoUrl, text:TweetTitulo+', más información en el siguiente enlace: '}">Twitter</button>
+<button class="google" ceiboShare  [googlePlus]="{url:repoUrl}">Google Plus</button>
 
-
-<div style="clear: both; width: 100%; height:80px;"></div>
 
 
 

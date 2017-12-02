@@ -425,29 +425,31 @@
 
 @media only screen and (max-width:1000px) {
 
-.menu  > .Bloques {
-    margin-left: 0px;
-    display: none;
-}
+  .menu  > .Bloques {
+      margin-left: 0px;
+      display: none;
+  }
 
   .NotasRelacionadas > .BloqueInformacion > .informacion > .extracto {
-    font-size: 12px;
-    line-height: 12px;
-}
+      font-size: 12px;
+      line-height: 12px;
+  }
 
+  .menuMovil{
+    display: block;
+  }
 
+  .menuIcon{
+    display: block;
+  }
 
-.menuMovil{
-  display: block;
-}
+  .texto_publicaciones{
+    display: block;
+  }
 
-.menuIcon{
-  display: block;
-}
-
-.header {
-    margin-top: 20px;
-}
+  .header {
+      margin-top: 20px;
+  }
 
 
 .Menu-Activo-Movil{

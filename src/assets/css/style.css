@@ -346,6 +346,22 @@ body{
 
  
 
+.texto_publicaciones{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Gotham-Black";
+   font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 30px;
+  display: none;
+}
+
+.texto_publicaciones span{
+  color: #CF0C00;
+}
+
 
 /* --------------------------------------------------------
 /* ---- SECCION PARA POST 
@@ -1191,6 +1207,29 @@ filter: grayscale(0%);
   margin-top: 10px;
   background: url("assets/images/home/vermas_verde.png");
   background-size: 50px 26px;
+}
+
+/*---------------------------------------------------------*\
+   Redes Sociales
+\*---------------------------------------------------------*/
+
+.facebook{
+  color: #FFF !important;
+  background: #475898 !important;
+  border: solid 1px  #475898;
+}
+
+.twitter{
+  color: #FFF !important;
+  background: #00AAF4 !important;
+  border: solid 1px  #00AAF4;
+}
+
+
+.google{
+  color: #FFF !important;
+  background: #DF4D3D !important;
+  border: solid 1px  #DF4D3D;
 }
 
 
