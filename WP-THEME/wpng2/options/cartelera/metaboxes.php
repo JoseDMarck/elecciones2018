@@ -34,7 +34,8 @@ function vimeo_upload_form(){
 
           <div class="BloqueA">Descripción</div>
           <div class="BloqueB"><input type="text" name="descripcion_nota" id="descripcion_nota" size="45" value="<?php echo $excerpt = Extracto($post_id);  ?>"/></div>
-           <div class="BloqueB"><input type="text" name="id_imagen_s" id="id_imagen_s" size="45" value="<?php the_post_thumbnail_url("thumbsize"); ?>"/></div>
+           <div class="BloqueB"><input type="text" name="id_imagen_s" id="id_imagen_s" size="45" value="<?php 
+           the_post_thumbnail_url("normalsize"); ?>"/></div>
 
        
            <input class="" type="submit" name="submit" value="Aceptar"/>
