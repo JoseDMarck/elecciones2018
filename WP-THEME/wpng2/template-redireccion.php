@@ -23,10 +23,7 @@ $url_final = str_replace($quitar, "publicaciones/", $valor_url_post);
 ?>
 	
 	<div class="titulo_loading">
-		<img src="<?php echo get_template_directory_uri();?>/template_assets/images/gifCultura.gif">
-
-	  
-		 
+		<img src="<?php echo get_template_directory_uri();?>/template_assets/images/491.gif">
 	</div><!--titulo-->
 
 </div>
