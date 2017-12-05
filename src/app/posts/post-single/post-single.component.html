@@ -159,8 +159,8 @@
 		<img src="{{ post.imagen_minsize }}" class="img-fluid">
 	</div>
  
-	
-	<div [innerHTML]="post.content.rendered" class="Post_Redered"></div>
+	 <!-- <div [innerHTML]="sanitizer.bypassSecurityTrustHtml(post.content.rendered)" class="Post_Redered"></div> -->
+	 <div [innerHTML]="post.content.rendered" class="Post_Redered"></div>
  
  
  <div class="CompartirTexto">

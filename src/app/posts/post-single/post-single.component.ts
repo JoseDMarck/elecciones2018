@@ -50,6 +50,7 @@ export class PostSingleComponent implements OnInit {
     private horas_minutos: string;
 
 
+
  
   show = false; 
   show2 = false; 
@@ -57,7 +58,8 @@ export class PostSingleComponent implements OnInit {
   posts: Post[];
   posts_related: Post[];
   repoUrl:any;
-   slugArray: any;
+  slugArray: any;
+  TweetTitulo: any;
 
 
   categorias: Post[];
@@ -120,6 +122,7 @@ dhms2(t) {
          this.categoria = res[0].categories;
          this.current_id = res[0].id;
          this.slugArray = res[0].slug
+         this.TweetTitulo = res[0].title.rendered
          console.log("CATEGORIA", this.categoria)
          console.log("CURRENT ID", this.current_id)
          this.getPostRelated(this.categoria, this.current_id);
