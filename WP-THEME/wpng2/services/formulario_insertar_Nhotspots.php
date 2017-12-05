@@ -35,7 +35,7 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) &&  $_POS
     'post_type' =>   'page',  //'post',page' or use a custom post type if you want to
     'post_content' => $descripcion_nota,
     'page_template'  => 'template-redireccion.php',
-    'post_parent' => 1015
+    'post_parent' => 767
 
     );
  
