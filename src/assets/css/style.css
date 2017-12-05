@@ -63,50 +63,50 @@ body{
 
 @font-face {
     font-family: "Roboto-Bold";
-    src: url("/assets/css/fuentes/Roboto/Roboto-Bold.ttf") format("truetype");
+    src: url("assets/css/fuentes/Roboto/Roboto-Bold.ttf") format("truetype");
 }
 
 
 @font-face {
     font-family: "Roboto-Medium";
-    src: url("/assets/css/fuentes/Roboto/Roboto-Medium.ttf") format("truetype");
+    src: url("assets/css/fuentes/Roboto/Roboto-Medium.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Roboto-Light";
-    src: url("/assets/css/fuentes/Roboto/Roboto-Light.ttf") format("truetype");
+    src: url("assets/css/fuentes/Roboto/Roboto-Light.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Roboto-Bold-Italic";
-    src: url("/assets/css/fuentes/Roboto/Roboto-BoldItalic.ttf") format("truetype");
+    src: url("assets/css/fuentes/Roboto/Roboto-BoldItalic.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Roboto-Light-Italic";
-    src: url("/assets/css/fuentes/Roboto/Roboto-LightItalic.ttf") format("truetype");
+    src: url("assets/css/fuentes/Roboto/Roboto-LightItalic.ttf") format("truetype");
 }
 
 
 @font-face {
     font-family: "Gotham-Bold";
-    src: url("/assets/css/fuentes/Gotham/Gotham-Bold.otf") format("truetype");
+    src: url("assets/css/fuentes/Gotham/Gotham-Bold.otf") format("truetype");
 }
 
 @font-face {
     font-family: "Gotham-Medium";
-    src: url("/assets/css/fuentes/Gotham/Gotham-Medium.otf") format("truetype");
+    src: url("assets/css/fuentes/Gotham/Gotham-Medium.otf") format("truetype");
 }
 
 
 @font-face {
     font-family: "Gotham-Light";
-    src: url("/assets/css/fuentes/Gotham/Gotham-Light.otf") format("truetype");
+    src: url("assets/css/fuentes/Gotham/Gotham-Light.otf") format("truetype");
 }
 
 @font-face {
     font-family: "Gotham-Black";
-    src: url("/assets/css/fuentes/Gotham/Gotham-Black.otf") format("truetype");
+    src: url("assets/css/fuentes/Gotham/Gotham-Black.otf") format("truetype");
 }
 
 
