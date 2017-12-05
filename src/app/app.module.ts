@@ -31,6 +31,10 @@ import { QueMePerdiComponent } from './posts/que-me-perdi/que-me-perdi.component
 import { QueProponenComponent } from './posts/que-proponen/que-proponen.component';
 import { QueSeVieneComponent  } from './posts/que-se-viene/que-se-viene.component';
 import { QuienJalaComponent  } from './posts/quien-jala/quien-jala.component';
+import { ContadorComponent } from './posts/contador/contador.component';
+import { ContadorMovilComponent } from './posts/contador-movil/contador-movil.component';
+
+
 import {ShareModule} from 'ng2share/share.module'
 
 import { MenuGeneralComponent } from './posts/menu-general/menu-general.component';
@@ -70,6 +74,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     QueProponenComponent,
     QueSeVieneComponent,
     QuienJalaComponent, 
+    ContadorComponent,
+    ContadorMovilComponent,
     CeiboShare,
     PostListEspaciosComponent
   ],
