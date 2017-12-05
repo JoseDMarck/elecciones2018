@@ -25,17 +25,8 @@
   
 
   <div class="menu">
- 
-<!-- Contador de Bloques -->
-<div class="BloqueContadorDias">
+ <app-contador></app-contador>
 
- <div class="texto-A">Faltan</div>
- <div class="texto-B"> {{dias}} </div>
- <div class="texto-A">Días</div>
- <div class="texto-C">{{horas_minutos}}</div>
-
-
-</div><!-- BloqueContador -->
 
 
 
@@ -81,15 +72,7 @@
 </div>
 
 <!-- Contador de Bloques -->
-<div class="BloqueContadorDiasMovil">
-
-<span class="texto-1"> Faltan: </span> 
-<span class="texto-2">{{dias}}</span> 
-<span class="texto-1"> Días  y </span> 
-<span class="texto-3">{{horas_minutos}}</span>
-  
-
-</div><!-- BloqueContador -->
+<app-contador-movil></app-contador-movil>
 
 
 </div><!--Menu-Activo-Movil -->
@@ -158,9 +141,11 @@
 	<div class="imagenPost">
 		<img src="{{ post.imagen_minsize }}" class="img-fluid">
 	</div>
+
+
  
-	 <!-- <div [innerHTML]="sanitizer.bypassSecurityTrustHtml(post.content.rendered)" class="Post_Redered"></div> -->
-	 <div [innerHTML]="post.content.rendered" class="Post_Redered"></div>
+	 <div [innerHTML]="sanitizer.bypassSecurityTrustHtml(post.content.rendered)" class="Post_Redered"></div> 
+	 <!--<div [innerHTML]="post.content.rendered" class="Post_Redered"></div> -->
  
  
  <div class="CompartirTexto">

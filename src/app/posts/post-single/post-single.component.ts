@@ -4,7 +4,7 @@ import { PostsService } from '../posts.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { trigger, state, style, animate,transition } from '@angular/animations';
 import { DomSanitizer } from '@angular/platform-browser';
-import { Observable, Subscription } from 'rxjs/Rx';
+
 
 
 
@@ -42,10 +42,6 @@ export class PostSingleComponent implements OnInit {
     private future: Date;
     private futureString: string;
     private diff: number;
-    private $counter: Observable<number>;
-    private $counter2: Observable<number>;
-    private subscription: Subscription;
-    private subscription2: Subscription;
     private dias: string;
     private horas_minutos: string;
 
@@ -72,7 +68,7 @@ export class PostSingleComponent implements OnInit {
   loadMoreVisible : boolean;
   selectedClass: number;
  
- constructor(private postsService: PostsService,  private router: Router,  private route: ActivatedRoute, private sanitizer: DomSanitizer, elm: ElementRef) { 
+ constructor(private postsService: PostsService,  private router: Router,  private route: ActivatedRoute, private sanitizer: DomSanitizer) { 
    this.arregloCountCat = [];
     this.loadMoreVisible = false;
     this.futureString = "July 1, 2018 00:00:00";
@@ -81,35 +77,7 @@ export class PostSingleComponent implements OnInit {
   }
 
 
-  dhms(t) {
-        var days, hours, minutes, seconds;
-        days = Math.floor(t / 86400);
-        t -= days * 86400;
-         
-
-        return [
-            days,
-        ].join(' ');
-    }
-
-
-dhms2(t) {
-         var days, hours, minutes, seconds;
-        days = Math.floor(t / 86400);
-        t -= days * 86400;
-        hours = Math.floor(t / 3600) % 24;
-        t -= hours * 3600;
-        minutes = Math.floor(t / 60) % 60;
-        t -= minutes * 60;
-        seconds = t % 60;
-
-
-        return [ 
-            hours + ' h',
-            minutes + ' m'
-
-        ].join(' ');
-    }
+ 
 
 
 
@@ -153,20 +121,7 @@ dhms2(t) {
     });
 
 
-        this.future = new Date(this.futureString); 
-        this.$counter = Observable.interval(1000).map((x) => {
-            this.diff = Math.floor((this.future.getTime() - new Date().getTime()) / 1000);
-            return x;
-        });
-
-        this.$counter2 = Observable.interval(1000).map((x) => {
-            this.diff = Math.floor((this.future.getTime() - new Date().getTime()) / 1000);
-            return x;
-        });
-
-        this.subscription = this.$counter.subscribe((x) => this.dias = this.dhms(this.diff));
-        this.subscription2 = this.$counter2.subscribe((x) => this.horas_minutos = this.dhms2(this.diff));
-
+         
   }
 
 
