@@ -56,7 +56,9 @@ export class PostSingleComponent implements OnInit {
   posts_Home: Post[];
   posts: Post[];
   posts_related: Post[];
-  
+  repoUrl:any;
+   slugArray: any;
+
 
   categorias: Post[];
   post_count:number;
@@ -117,9 +119,11 @@ dhms2(t) {
         console.log("Post", this.post)
          this.categoria = res[0].categories;
          this.current_id = res[0].id;
+         this.slugArray = res[0].slug
          console.log("CATEGORIA", this.categoria)
          console.log("CURRENT ID", this.current_id)
          this.getPostRelated(this.categoria, this.current_id);
+         this.repoUrl = 'http://michoacantrespuntocero.com/2018elecciones.com/posts-redes/'+this.slugArray;
    
       });
   }
