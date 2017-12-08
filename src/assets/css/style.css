@@ -236,10 +236,11 @@ body{
 .BloqueContadorDias{
   position: absolute;
   right: 12%;
-  top: -168px;
+  top: -178px;
   width: 160px;
-  height: 170px;
+  height: 180px;
   background-color: #000;
+  padding-top: 10px;
 }
 
 
@@ -426,9 +427,9 @@ body{
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
-    background: url("assets/images/home/generic.png");
+    background: url("assets/images/home/preloader.gif");
   background-repeat:no-repeat;
-background-size:contain;
+background-size: 128px 128px;
 background-position:center;
 
 }
@@ -616,7 +617,7 @@ transform: scale(1.1,1.1); /* Standard syntax */
   margin-left: 10px;
   position: relative;
   color: #000;
-  font-family: "Roboto-Bold-Italic";
+  font-family: "Gotham-Black";
   font-size: 30px;
   line-height: 30px;
   margin-bottom: 25px; 
@@ -993,12 +994,15 @@ transform: scale(1.1,1.1); /* Standard syntax */
 .NotasRelacionadas{
   width: 30%;
   height: auto;
-  padding-top: 30px;
+  padding-top: 15px;
   padding-bottom: 30px;
-  background-color: #000;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #FFF;
   float: left;
-  color: #FFF;
+  color: #000;
   margin-top: 140px;
+  
 }
 
 .NotasRelacionadas > .SeccionTitulo{
@@ -1024,7 +1028,7 @@ transform: scale(1.1,1.1); /* Standard syntax */
   width: 100%;
   height: auto;
   margin-bottom: 20px;
-  background:   #343a40;
+  background:   #FFF;
 
    -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -1046,25 +1050,24 @@ transform: scale(1.1,1.1); /* Standard syntax */
 
 .NotasRelacionadas > .BloqueInformacion > .imagen{
   width: 40%;
-  height: 160px;
-  background: url("assets/images/home/generic.png");
+  height: 180px;
+  background: url("assets/images/home/preloader.gif");
   background-repeat:no-repeat;
-background-size:contain;
-background-position:center;
+  background-size: 128px 128px;
+  background-position:center;
   float: left;
   overflow: hidden;
 } 
 
 .NotasRelacionadas > .BloqueInformacion > .imagen img{
-  width: 150%;
+  width: 165%;
   height: auto;
 }
 
 .NotasRelacionadas > .BloqueInformacion > .informacion{
-  width: 60%;
+  width: 56%;
   height: 160px;
-
-  float: left;
+  float: right;
   padding: 5px;
 } 
 
@@ -1233,12 +1236,15 @@ filter: grayscale(0%);
   color: #FFF !important;
   background: #475898 !important;
   border: solid 1px  #475898;
+  cursor: pointer !important;
+  position: relative;
 }
 
 .twitter{
   color: #FFF !important;
   background: #00AAF4 !important;
   border: solid 1px  #00AAF4;
+  cursor: pointer !important;
 }
 
 
@@ -1246,8 +1252,10 @@ filter: grayscale(0%);
   color: #FFF !important;
   background: #DF4D3D !important;
   border: solid 1px  #DF4D3D;
+  cursor: pointer !important;
 }
 
+ 
 
 
 /* --------------------------------------------------------
