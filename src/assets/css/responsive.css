@@ -186,11 +186,19 @@
 
 @media only screen and (max-width:1366px) {
 
+
  
 .header > .logo {
     width: 480px;
 }
 
+.NotasRelacionadas > .BloqueInformacion > .imagen {
+    height: 180px;
+}
+
+.NotasRelacionadas > .BloqueInformacion {
+  color: #000;
+}
 
 
 }/* 1366 */
@@ -514,7 +522,15 @@
     margin-bottom: 10px;
 }
 
+.NotasRelacionadas > .BloqueInformacion > .imagen {
+    height: 180px;
+}
 
+
+.NotasRelacionadas  > .BloqueInformacion  > .informacion > .titulo  {
+    font-size: 14px;
+    line-height: 14px;
+}
 
 }/* 900 */
 
