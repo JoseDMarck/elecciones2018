@@ -503,7 +503,7 @@ font-family: "Gotham-Medium";
     margin-bottom: 20px;
 }
 
-  
+
 
 .BloquesPostList{
   width: 15%;
@@ -1073,8 +1073,8 @@ background-position:center;
   width: 100%;
   height: auto;
   font-family: "Gotham-Black";
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 16px;
   margin-bottom: 20px;
 }
 
@@ -1082,8 +1082,8 @@ background-position:center;
   width: 100%;
   height: auto;
   font-family: "Gotham-Light";
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 12px;
+  line-height: 12px;
 }
 
 /* --------------------------------------------------------

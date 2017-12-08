@@ -735,6 +735,8 @@
 
 .ContendorBloquePost > .categoria  {
    margin-bottom: 10px;
+   font-size: 14px;
+  line-height: 14px;
 }
 
 
@@ -768,6 +770,7 @@
 .Bloque_GrandeF {
     width: 100% !important;
 }
+
 
 
 }/* 568 */
