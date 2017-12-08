@@ -359,8 +359,8 @@
 
 
 .ContendorBloquePost > .extracto {
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 14px;
+    line-height: 16px;   
 }
 
 
@@ -650,6 +650,11 @@
   margin-bottom: 34px;
 }
 
+.ContendorBloquePost > .titulo {
+    font-size: 16px;
+    line-height: 18px;
+}
+
 
 }/* 900 */
 
@@ -733,9 +738,39 @@
 }
 
 
+.BloquesElecciones {
+    width: 100%;
+}
+
+.ContendorBloquePost > .titulo {
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.ContendorBloquePost > .extracto {
+    font-size: 14px;
+    line-height: 14px;
+}
 
 
-}/* 900 */
+.ContendorBloquePost > .imagen{
+  height: 200px;
+}
+
+
+.ContendorBloquePost > .imagen img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+.Bloque_GrandeF {
+    width: 100% !important;
+}
+
+
+}/* 568 */
 
 
 
@@ -755,11 +790,7 @@
 
 @media only screen and (max-width:490px) {
 
- .ContendorBloquePost  > .imagen  {
-    width: 100%;
-    height: 160px;
-}
-
+ 
 
 
  .ContendorBloquePost{
@@ -797,6 +828,8 @@
 }
 
 
+
+
 }/* 900 */
 
 
@@ -830,16 +863,7 @@
 
 
 
-.ContendorBloquePost > .titulo {
-    font-size: 16px;
-    line-height: 16px;
-}
-
-.ContendorBloquePost > .categoria {
-    font-size: 12px;
-    line-height: 12px;
-}
-
+ 
 
  
 
@@ -862,13 +886,33 @@
     width: 100% !important;
 }
 
-.ContendorBloquePost > .imagen {
-    width: 100%;
-    height: 220px;
+ 
+
+.ContendorBloquePost > .imagen{
+  height: 180px;
 }
 
 
+
 }/* 900 */
+
+@media only screen and (max-width:380px) {
+
+  .ContendorBloquePost > .titulo {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.ContendorBloquePost > .categoria {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+
+
+
+}
+
 
 
 
