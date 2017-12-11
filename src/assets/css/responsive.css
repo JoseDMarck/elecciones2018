@@ -499,6 +499,10 @@
 }
 
 
+.BloqueContadorDias {
+    top: -170px;
+}
+
 }
 
 /* --------------------------------------------------------
@@ -866,6 +870,10 @@
     float: left;
     height: auto;
     overflow: hidden;
+}
+
+.imagen_elecciones{
+  display: none;
 }
 
  
