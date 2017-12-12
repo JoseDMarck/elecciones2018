@@ -212,6 +212,11 @@ body{
 -ms-transition: all 0.5s ease;
 }
 
+.menu > .Bloques a {
+	text-decoration: none;
+	color: #FFF;
+} 
+
 
 .menu > .Bloques:hover{
    background: #CF0C00;
