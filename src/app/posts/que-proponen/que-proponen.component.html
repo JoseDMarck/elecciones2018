@@ -147,6 +147,9 @@
       Publicaciones de: <br> <span>¿Qué Proponen?</span>
     </div><!-- texto_publicaiones -->
 
+    <div class="NoPublicaciones" *ngIf="post_exists_bol"> Por el momento no hay publicaciones para esta categoría, ¡espéralas muy pronto! </div>
+    
+
  
      <div class="BloquesElecciones {{ post.tamano_bloque }}" *ngFor="let post of posts; let i = index; " (click)="selectPost(post.slug)"> 
 

@@ -47,6 +47,9 @@ export class QueProponenComponent implements OnInit {
     private dias: string;
     private horas_minutos: string;
 
+    private post_exists: number;
+    private post_exists_bol: boolean;
+
 
   show = false;  
   show2 = false;  
@@ -110,7 +113,21 @@ dhms2(t) {
       .getPosts_QueProponen()
       .subscribe(res => {
         this.posts = res;
-        console.log(this.posts)
+        console.log(this.posts);
+
+        this.post_exists = this.posts.length
+        console.log("post_exists:", this.post_exists )
+
+        if(this.post_exists > 0 ){
+          this.post_exists_bol = false;
+        console.log("post_exists_bol:", this.post_exists_bol)
+
+
+        } else{
+          this.post_exists_bol = true;
+          console.log("post_exists_bol:", this.post_exists_bol)
+        }
+        
          //this.imageX = this.sanitizer.bypassSecurityTrustStyle(`url(${element.image})`);
       });
   }
