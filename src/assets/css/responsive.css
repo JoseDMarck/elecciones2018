@@ -503,6 +503,13 @@
     top: -170px;
 }
 
+
+.Listado {
+  width: 100%;
+}
+
+
+
 }
 
 /* --------------------------------------------------------
@@ -704,7 +711,7 @@
 }
 
 .NotasRelacionadas {
-    width: 90%;
+    width: 100%;
     height: auto;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -872,10 +879,29 @@
     overflow: hidden;
 }
 
-.imagen_elecciones{
-  display: none;
+
+.footer-general > .imagen_elecciones {
+    width: 45px;
 }
 
+.footer-general {
+    width: 100%;
+    height: 60px;
+    background: #FFF;
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    left: 0px;
+}
+
+
+.footer-general > .imagen_revo {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+}
  
 
 }/* 900 */
