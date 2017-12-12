@@ -21,8 +21,7 @@
     padding-right: 30px;
 }
 
-.BloqueCurrent {
-    background: #CF0C00 !important;
+.BloqueCurrentInicio {
     margin-left: 6% !important;
 }
 
@@ -41,8 +40,7 @@
     padding-right: 30px;
 }
 
-.BloqueCurrent {
-    background: #CF0C00 !important;
+.BloqueCurrentInicio {
     margin-left: 6% !important;
 }
  
@@ -212,7 +210,7 @@
 }
 
 
-.BloqueCurrent {
+.BloqueCurrentInicio {
     margin-left: 0% !important;
 }
  
