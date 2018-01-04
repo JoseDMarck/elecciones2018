@@ -15,22 +15,21 @@
 
 
 
- <div class="header">
+ 
+  <div class="header">
 
-  <div class="menuIcon" (click)="toggle2()"></div>
+   <div class="menuIcon" (click)="toggle2()"></div>
 
-  <div class="logo" (click)="GoToInicio()">
+  <div class="logo">
     <img src="assets/images/home/Elige-2018-logo.png">
   </div><!-- logo -->
   
 
   <div class="menu">
+ 
  <app-contador></app-contador>
 
-
-
-
-<!-- MENU MOVIL ================== -->
+ <!-- MENU MOVIL ================== -->
 <div class="menuMovil">
   
 </div><!-- menuMovil -->
@@ -41,6 +40,10 @@
 
 <div class="Bloques" (click)="GoToInicio()">
   Inicio
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('noticias');">
+  Noticias
 </div>
 
 <div class="Bloques" (click)="SeleccionMenu('entrana');">
@@ -71,9 +74,6 @@
   ¿Quién jalá con quién?
 </div>
 
-<div class="Bloques">
-  <a href="http://michoacantrespuntocero.com/" target="_blank">Revolución 3.0 </a>
-</div>
 
 <!-- Contador de Bloques -->
 <app-contador-movil></app-contador-movil>
@@ -84,10 +84,14 @@
 <!-- MENU MOVIL ================== -->
 
 
-
-<div class="Bloques" (click)="GoToInicio();">
+<div class="Bloques" (click)="GoToInicio()">
   Inicio
 </div>
+
+<div class="Bloques" (click)="SeleccionMenu('noticias');">
+  Noticias
+</div>
+
 
 <div class="Bloques" (click)="SeleccionMenu('entrana');" >
   La Entraña
@@ -97,29 +101,27 @@
   Así pasó
 </div>
 
-<div class="Bloques">
+<div class="Bloques" (click)="SeleccionMenu('donde-dice');">
   ¿Dónde dice?
 </div>
 
-<div class="Bloques">
+<div class="Bloques" (click)="SeleccionMenu('que-me-perdi');">
   ¿Qué me perdí?
 </div>
 
-<div class="Bloques">
+<div class="Bloques" (click)="SeleccionMenu('que-proponen');">
   ¿Qué proponen?
 </div>
 
-<div class="Bloques">
+<div class="Bloques" (click)="SeleccionMenu('que-se-viene');">
   ¿Qué se viene?
 </div>
 
-<div class="Bloques">
+<div class="Bloques" (click)="SeleccionMenu('quien-jala');">
   ¿Quién jalá con quién?
 </div>
 
-<div class="Bloques">
-  <a href="http://michoacantrespuntocero.com/" target="_blank">Revolución 3.0 </a>
-</div>
+
 
 
 <div style="clear: both;"></div>
@@ -127,7 +129,6 @@
 
 
 </div><!-- header -->
-
 
 <div class="BloqueMainPost" [@fadeInAnimation]="stateName">
 <div class="contenidoPost" *ngIf="post">
@@ -181,7 +182,7 @@
 	<div class="BloqueInformacion" *ngFor="let post of posts_related; let i = index; " (click)="selectPost(post.slug)">
 		
 		<div class="imagen">
-			<img src="{{ post.imagen_minsize }}">
+			<div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
 		</div><!-- imagen -->
 
 

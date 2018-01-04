@@ -177,6 +177,9 @@ export class PostSingleComponent implements OnInit {
    console.log("Slug normal", slug)
   }
 
+getBackground(image) {
+    return this.sanitizer.bypassSecurityTrustStyle(`linear-gradient(rgba(29, 29, 29, 0), rgba(16, 16, 23, 0.5)), url(${image})`);
+}
 
 
 }
