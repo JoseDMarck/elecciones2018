@@ -385,7 +385,22 @@ body{
   float: left;
   margin-bottom: 40px; 
   cursor: pointer;
+  padding: 0px 0 20px 10px;
+  border-right: solid 20px rgba(0, 0, 0, 0);
 }
+
+ .BloquesElecciones:hover .imagen-BG{
+    width: 105%;
+    height: 105%;
+
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    -o-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+    
+    -webkit-filter: brightness(100%);
+}
+
 
 
 .BloquesE-1{
@@ -415,14 +430,19 @@ body{
   width: 50% !important;
 }
 
-
-
-
 .ContendorBloquePost{
-  width: 90%;
+  width: 100%;
   height: 648px;
   margin: 0 auto;
   background: #FFF;
+   -webkit-box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.1);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.1);
+  box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.1);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+ 
 
 }
 
@@ -477,8 +497,8 @@ font-family: "Gotham-Medium";
   width: 100%;
     height: auto;
     font-family: "Gotham-Black";
-    font-size: 23px;
-    line-height: 23px;
+    font-size: 20px;
+    line-height: 24px;
     text-align: center;
     color: #000;
     margin-bottom: 20px;
@@ -500,9 +520,9 @@ font-family: "Gotham-Medium";
 .ContendorBloquePost > .extracto{
   width: 100%;
     height: auto;
-    font-family: "Gotham-Medium";
-    font-size: 15px;
-    line-height: 18px;
+    font-family: "Gotham-Light";
+    font-size: 16px;
+    line-height: 22px;
     text-align: left;
     color: #000;
     padding: 10px;
@@ -530,8 +550,6 @@ font-family: "Gotham-Medium";
   height: auto;
   margin-bottom: 100px;
 }
-
-
 
 
 
@@ -634,6 +652,41 @@ transform: scale(1.1,1.1); /* Standard syntax */
   top: 0px;
   z-index: 999;
 } 
+
+.imagen-BG{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+    background-position: center center!important;
+    background-size: cover!important;
+    display: block!important;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    -o-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+
+    -webkit-filter: brightness(70%);
+  
+}
+
+ .imagen-BG:hover{
+    width: 105%;
+    height: 105%;
+
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    -o-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+    
+    -webkit-filter: brightness(100%);
+}
 
 /* --------------------------------------------------------
 /* ---- DATOS 
@@ -1289,6 +1342,7 @@ filter: grayscale(0%);
   z-index: 9999999;
   background: #FFF;
   display: none;
+
 }
 
 .logo-cultura-footer{
@@ -1338,6 +1392,13 @@ filter: grayscale(0%);
   bottom: 0;
   z-index: 9999;
   left: 0px;
+  -webkit-box-shadow: 5px -1px 2px 2px rgba(50, 50, 50, 0.1);
+  -moz-box-shadow: 5px -1px 5px 2px rgba(50, 50, 50, 0.1);
+  box-shadow: 5px -1px 5px 2px rgba(50, 50, 50, 0.1);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
 }
 
 

@@ -46,6 +46,7 @@
  
  
  
+
 }/* 2200 */
 
 
@@ -253,8 +254,8 @@
 
 
 .ContendorBloquePost > .titulo {
-  font-size: 24px;
-  line-height: 26px;
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .ContendorBloquePost > .categoria {
@@ -275,6 +276,11 @@
     padding-right: 5px;
   }
 
+
+.ContendorBloquePost > .extracto {
+    font-size: 14px;
+    line-height: 22px;
+}
  
 }/* 1280 */
 
@@ -845,7 +851,7 @@
 
 
 .ContendorBloquePost > .imagen{
-  height: 200px;
+  height: 240px;
 }
 
 
@@ -886,7 +892,7 @@
 
 
  .ContendorBloquePost{
-    height: 400px;
+    height: 440px;
 }
 
 
@@ -1007,6 +1013,15 @@
   height: 180px;
 }
 
+
+.ContendorBloquePost {
+    height: 400px;
+}
+
+.ContendorBloquePost > .titulo {
+    font-size: 17px;
+    line-height: 17px;
+}
 
 
 }/* 900 */
