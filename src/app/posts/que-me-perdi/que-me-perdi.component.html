@@ -53,6 +53,10 @@
   Inicio
 </div>
 
+<div class="Bloques" (click)="SeleccionMenu('noticias');">
+  Noticias
+</div>
+
 <div class="Bloques" (click)="SeleccionMenu('entrana');">
   La Entraña
 </div>
@@ -81,9 +85,7 @@
   ¿Quién jalá con quién?
 </div>
 
-<div class="Bloques">
-  <a href="http://michoacantrespuntocero.com/" target="_blank">Revolución 3.0 </a>
-</div>
+ 
 
 <!-- Contador de Bloques -->
 <div class="BloqueContadorDiasMovil">
@@ -105,6 +107,10 @@
 
 <div class="Bloques BloqueCurrentInicio" (click)="GoToInicio()">
   Inicio
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('noticias');">
+  Noticias
 </div>
 
 <div class="Bloques" (click)="SeleccionMenu('entrana');">
@@ -135,9 +141,7 @@
   ¿Quién jalá con quién?
 </div>
 
-<div class="Bloques">
-  <a href="http://michoacantrespuntocero.com/" target="_blank">Revolución 3.0 </a>
-</div>
+ 
 
 
 <div style="clear: both;"></div>
@@ -165,13 +169,14 @@
         <div class="ContendorBloquePost">
           <div class="imagen">
 
-            
+            <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
+
             <div class="fecha">
               <div class="mes">{{ post.post_fecha_mes}}</div>
               <div class="dia">{{ post.post_fecha_dia}}</div>
             </div>
 
-            <img src="{{ post.imagen_normalsize }}" >  
+           
           </div>
 
           <div class="titulo">

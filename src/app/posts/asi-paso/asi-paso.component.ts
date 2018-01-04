@@ -232,6 +232,10 @@ onScroll () {
  }
 
 
+getBackground(image) {
+    return this.sanitizer.bypassSecurityTrustStyle(`linear-gradient(rgba(29, 29, 29, 0), rgba(16, 16, 23, 0.5)), url(${image})`);
+}
+
 SeleccionMenu(slug:string ) {
      this.router.navigate(["publicaciones-"+slug]);
 }
