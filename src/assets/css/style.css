@@ -988,29 +988,55 @@ transform: scale(1.1,1.1); /* Standard syntax */
   max-width: 1024px;
   width: 100%;
   height: auto;
-  font-family: "Gotham-Light";
+  font-family: "Roboto-Light";
   font-size: 20px;
   line-height: 28px;
 }
+
+    
+
+.Post_Redered:first-letter {
+    text-transform: uppercase;
+    font-size: 102px;
+    color: #212121;
+    vertical-align: top;
+    float: left;
+    line-height: 82px;
+    margin-top: 0px;
+    margin-right: 10px;
+    font-weight: 900;
+    font-family: "Roboto-Medium";
+  }
+
+ 
+
+ .contenidoPost strong{
+   font-weight: bold;
+   font-family: "Roboto-Bold";
+}
+
+.contenidoPost blockquote{
+  font-size: 21px;
+    line-height: 35px;
+    color: #CF0C00 !important;
+    margin-bottom: 0px;
+    border-left: 4px solid #CF0C00;
+    padding-left: 20px;
+    font-family: "Roboto-Light";
+}
+
 
 .contenidoPost a{
   color: #CF0C00;
   text-decoration: none;
 
-     -webkit-transition: all 0.3s ease;
+ -webkit-transition: all 0.3s ease;
 -moz-transition: all 0.3s ease;
 -o-transition: all 0.3s ease;
 -ms-transition: all 0.3s ease;
 
 } 
 
-.contenidoPost strong{
-  font-weight: 600;
-  font-family: Gotham-Medium;
-  background-color: #CB3237;
-  color: #000;
-  padding: 5px;
-}
 
 .contenidoPost a:hover{
  
@@ -1018,9 +1044,10 @@ transform: scale(1.1,1.1); /* Standard syntax */
 -moz-transition: all 0.3s ease;
 -o-transition: all 0.3s ease;
 -ms-transition: all 0.3s ease;
+background: #CF0C00;
+color: #FFF;
+padding: 5px;
 
-  font-weight: 600;
-  font-family: Gotham-Medium;
 
 }
 
@@ -1076,7 +1103,8 @@ transform: scale(1.1,1.1); /* Standard syntax */
   color: #000;
   margin-top: 140px;
   margin-bottom: 120px;
-  
+  overflow: hidden;
+
 }
 
 .NotasRelacionadas > .SeccionTitulo{
@@ -1088,6 +1116,7 @@ transform: scale(1.1,1.1); /* Standard syntax */
     width: 100%;
     height: auto;
     margin-bottom: 20px;
+
 }
 
 .NotasRelacionadas > .barra{
@@ -1110,6 +1139,14 @@ transform: scale(1.1,1.1); /* Standard syntax */
     -ms-transition: all 0.5s ease;
     cursor: pointer;
 
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.1);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.1);
+  box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.1);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+
 }
 
 .NotasRelacionadas > .BloqueInformacion:hover{
@@ -1131,6 +1168,7 @@ transform: scale(1.1,1.1); /* Standard syntax */
   background-position:center;
   float: left;
   overflow: hidden;
+   position: relative;f
 } 
 
 .NotasRelacionadas > .BloqueInformacion > .imagen img{

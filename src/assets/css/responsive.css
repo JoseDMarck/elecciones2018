@@ -569,6 +569,7 @@
 
 .BloqueContadorDias {
     top: -160px;
+    display: none;
 }
 
 
