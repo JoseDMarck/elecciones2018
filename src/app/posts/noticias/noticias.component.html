@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="assets/bootstrap-4.0.0-beta-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body  >
+
+
+<div class="ScrollPost" infiniteScroll 
+        [infiniteScrollDistance]="1200"
+        [infiniteScrollThrottle]="1200"
+        (scrolled)="onScroll()"
+        >
+
+
+
+  <div class="header">
+
+  <div class="menuIcon" (click)="toggle2()"></div>
+
+  <div class="logo" (click)="GoToInicio()">
+    <img src="assets/images/home/Elige-2018-logo.png">
+  </div><!-- logo -->
+  
+
+  <div class="menu">
+ 
+<!-- Contador de Bloques -->
+<div class="BloqueContadorDias">
+
+ <div class="texto-A">Faltan</div>
+ <div class="texto-B"> {{dias}} </div>
+ <div class="texto-A">Días</div>
+ <div class="texto-C">{{horas_minutos}}</div>
+ 
+
+</div><!-- BloqueContador -->
+
+
+<!-- MENU MOVIL ================== -->
+<div class="menuMovil">
+  
+</div><!-- menuMovil -->
+
+<div class="Menu-Activo-Movil" [@heroState2]="stateName2" >
+
+  <div class="btn_Close" (click)="toggle2()"></div>
+
+<div class="Bloques" (click)="GoToInicio()">
+  Inicio
+</div>
+
+<div class="Bloques BloqueCurrent" (click)="SeleccionMenu('noticias');">
+  Noticias
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('entrana');">
+  La Entraña
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('asi-paso');">
+  Así pasó
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('donde-dice');">
+  ¿Dónde dice?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-me-perdi');">
+  ¿Qué me perdí?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-proponen');">
+  ¿Qué proponen?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-se-viene');">
+  ¿Qué se viene?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('quien-jala');">
+  ¿Quién jalá con quién?
+</div>
+
+ 
+
+<!-- Contador de Bloques -->
+<div class="BloqueContadorDiasMovil">
+
+<span class="texto-1"> Faltan: </span> 
+<span class="texto-2">{{dias}}</span> 
+<span class="texto-1"> Días  y </span> 
+<span class="texto-3">{{horas_minutos}}</span>
+  
+ 
+ 
+</div><!-- BloqueContador -->
+
+
+</div><!--Menu-Activo-Movil -->
+
+<!-- MENU MOVIL ================== -->
+
+
+<div class="Bloques BloqueCurrentInicio" (click)="GoToInicio()">
+  Inicio
+</div>
+
+<div class="Bloques BloqueCurrent" (click)="SeleccionMenu('noticias');">
+  Noticias
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('entrana');">
+  La Entraña
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('asi-paso');">
+  Así pasó
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('donde-dice');">
+  ¿Dónde dice?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-me-perdi');">
+  ¿Qué me perdí?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-proponen');">
+  ¿Qué proponen?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-se-viene');">
+  ¿Qué se viene?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('quien-jala');">
+  ¿Quién jalá con quién?
+</div>
+ 
+
+
+<div style="clear: both;"></div>
+</div><!-- menu -->
+
+
+</div><!-- header -->
+
+  
+
+  <div class="Listado" [@fadeInAnimation]="stateName">
+
+<div class="texto_publicaciones">
+      Publicaciones de: <br> <span>Noticias</span>
+    </div><!-- texto_publicaiones -->
+
+
+    <div class="NoPublicaciones" *ngIf="post_exists_bol"> Por el momento no hay publicaciones para esta categoría, ¡espéralas muy pronto! </div>
+    
+
+
+ 
+
+     <div class="BloquesElecciones {{ post.tamano_bloque }}" *ngFor="let post of posts; let i = index; " (click)="selectPost(post.slug)"> 
+
+        <div class="ContendorBloquePost">
+          <div class="imagen">
+
+            <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
+            
+            <div class="fecha">
+              <div class="mes">{{ post.post_fecha_mes}}</div>
+              <div class="dia">{{ post.post_fecha_dia}}</div>
+            </div>
+
+          
+          </div>
+
+          <div class="titulo">
+            {{ post.title.rendered }}
+          </div>
+
+           <div class="categoria">
+             {{post.post_categoria}}
+          </div>
+
+          <div [innerHTML]="post.custom_extracto" class="extracto"></div>
+
+        </div>
+
+     </div><!--BloquesElecciones  -->
+
+
+  <div style="clear: both;"></div>
+  </div><!-- Listado -->
+   
+
+ 
+</div><!--scrollPost END -->
+
+
+
+<div class="footer-general">
+  
+  <div class="imagen_elecciones">
+    <a href="http://michoacantrespuntocero.com/2018elecciones.com/">
+     <img src="assets/images/home/Logo-Elecciones-2018.png">
+   </a>
+  </div><!-- imagen_elecciones -->
+
+   <div class="imagen_revo">
+      <a href="http://michoacantrespuntocero.com/" target="_blank">
+        <img src="assets/images/home/Logo-Revo-Elige.png">
+      </a>
+  </div><!-- imagen_revo -->
+
+   
+  <div style="clear: both;"></div>
+</div><!-- footer-page -->
+
+
+ 
+</body>
+<link rel="stylesheet" href="assets/css/responsive.css">
+</html>
+
+
+
+
+
+ 
