@@ -158,19 +158,11 @@
     float: right;
   }
 
-  .NotasRelacionadas > .BloqueInformacion > .informacion > .extracto {
-    font-size: 12px;
-    line-height: 12px;
-  }
-
-
-  .NotasRelacionadas > .BloqueInformacion > .imagen {
-    height: auto;
-  }
-
-  .NotasRelacionadas > .BloqueInformacion > .informacion {
-    height: auto;
-  }
+ .NotasRelacionadas > .BloqueInformacion > .informacion{
+  width: 56%;
+  height: 160px;
+  float: right;
+  padding: 5px;
 
 }
 
@@ -198,13 +190,17 @@
 @media only screen and (max-width:1480px) {
  
  
-
+.Listado {
+    width: 90%;
+}
  
 
 .BloqueCurrentInicio {
     margin-left: 0% !important;
 }
- 
+
+
+
 
 
 }/* 14480 */
@@ -308,14 +304,9 @@
     background: rgb(235, 235, 235) !important;
 }
 
-
- 
-
 .NotasRelacionadas > .SeccionTitulo {
      color: #000;
 }
-
-
 
 .NotasRelacionadas > .BloqueInformacion {
     width: 50%;
@@ -327,7 +318,10 @@
     line-height: 15px;
 }
 
-
+.Bloque_GrandeF  > .ContendorBloquePost  > .titulo {
+    font-size: 20px;
+    line-height: 20px;    
+}
 
 
 }/* 1280 */
@@ -654,6 +648,11 @@
 }
 
 
+
+.Bloque_GrandeF  > .ContendorBloquePost  > .titulo {
+    font-size: 16px;
+    line-height: 18px;    
+}
 
 }
 

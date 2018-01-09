@@ -19,13 +19,13 @@ const routes: Routes = [
    
 
   {
-    path: 'publicaciones-entrana',
+    path: 'publicaciones-a-fondo',
     component: EntranaComponent,
     pathMatch: 'full'
   },
 
   {
-    path: 'publicaciones-asi-paso',
+    path: 'publicaciones-asi-fue',
     component: AsiPasoComponent,
     pathMatch: 'full'
   },

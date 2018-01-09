@@ -59,12 +59,12 @@
   Noticias
 </div>
 
-<div class="Bloques" (click)="SeleccionMenu('entrana');">
-  La Entraña
+<div class="Bloques" (click)="SeleccionMenu('a-fondo');">
+  A fondo
 </div>
 
-<div class="Bloques" (click)="SeleccionMenu('asi-paso');">
-  Así pasó
+<div class="Bloques" (click)="SeleccionMenu('asi-fue');">
+  Así fue
 </div>
 
 <div class="Bloques" (click)="SeleccionMenu('donde-dice');">
@@ -116,12 +116,12 @@
   Noticias
 </div>
 
-<div class="Bloques BloqueCurrent" (click)="SeleccionMenu('entrana');">
-  La Entraña
+<div class="Bloques BloqueCurrent" (click)="SeleccionMenu('a-fondo');">
+  A fondo
 </div>
 
-<div class="Bloques" (click)="SeleccionMenu('asi-paso');">
-  Así pasó
+<div class="Bloques" (click)="SeleccionMenu('asi-fue');">
+  Así fue
 </div>
 
 <div class="Bloques" (click)="SeleccionMenu('donde-dice');">
@@ -157,7 +157,7 @@
   <div class="Listado" [@fadeInAnimation]="stateName">
 
     <div class="texto_publicaciones">
-      Publicaciones de: <br> <span>La Entraña</span>
+      Publicaciones de: <br> <span>A fondo</span>
     </div><!-- texto_publicaiones -->
 
 
@@ -189,6 +189,7 @@
           </div>
 
           <div [innerHTML]="post.custom_extracto" class="extracto"></div>
+           <div class="fondoStracto"></div>
 
         </div>
 
