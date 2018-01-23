@@ -128,6 +128,7 @@ function vimeo_upload_form(){
 
   $value_id_post_fecha = (get_post_meta($post->ID, 'id_post_fecha', true));
   $value_id_post_author = (get_post_meta($post->ID, 'id_post_author', true));
+  
 
 
 
@@ -284,9 +285,25 @@ $name = $category[0]->cat_name;
 <input type="text" name="id_post_categoria" id="id_post_categoria" value="<?php    echo $name;  ?>" style="width: 200px;" /><br><br>
 
 
+<?php
+$valor_url_post = get_permalink();
+$quitar = array("2018elecciones.com/");
+$url_final = str_replace($quitar, "2018elecciones.com/posts-redes/", $valor_url_post);
+?>
 
+<script type="text/javascript">
+  function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+</script>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<p style="display:none" id="p1"><?php echo $url_final ?></p>
+<h1 style="cursor: pointer;" onclick="copyToClipboard('#p1')">Click aquí para copiar URL para Redes</h1>
 
  
   
@@ -443,7 +460,10 @@ $name = $category[0]->cat_name;
   update_post_meta($post_id, 'id_post_categoria', $var_1);
   }
 
- 
+
+    
+
+
 
 
 
