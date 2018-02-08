@@ -67,6 +67,9 @@ export class PostSingleComponent implements OnInit {
   imageX:any;
   loadMoreVisible : boolean;
   selectedClass: number;
+  repoUrlWA:any;
+  repoUrlWA2:any;
+  sanitizedUrl:any
  
  constructor(private postsService: PostsService,  private router: Router,  private route: ActivatedRoute, private sanitizer: DomSanitizer) { 
    this.arregloCountCat = [];
@@ -95,10 +98,13 @@ export class PostSingleComponent implements OnInit {
          console.log("CURRENT ID", this.current_id)
          this.getPostRelated(this.categoria, this.current_id);
          this.repoUrl = 'http://michoacantrespuntocero.com/2018elecciones.com/posts-redes/'+this.slugArray;
-   
+         this.repoUrlWA = 'whatsapp://send?text='+this.repoUrl;
+         this.sanitizedUrl = this.sanitizer.bypassSecurityTrustUrl('http://michoacantrespuntocero.com/2018elecciones.com/las-mujeres-que-proponen');
+         console.log("asdasdasdasd", this.sanitizedUrl);
+
       });
   }
-
+ 
   getPostRelated(cat, current_id){
     this.postsService
       .getPostsRelated(cat, current_id)
@@ -111,6 +117,9 @@ export class PostSingleComponent implements OnInit {
   }
 
 
+  sanitize(url:string){
+      return this.sanitizer.bypassSecurityTrustUrl(url);
+  }
 
   ngOnInit() {
    

@@ -1381,6 +1381,8 @@ filter: grayscale(0%);
   border: solid 1px  #475898;
   cursor: pointer !important;
   position: relative;
+  margin-bottom: 10px;
+
 }
 
 .twitter{
@@ -1388,6 +1390,8 @@ filter: grayscale(0%);
   background: #00AAF4 !important;
   border: solid 1px  #00AAF4;
   cursor: pointer !important;
+  margin-bottom: 10px;
+
 }
 
 
@@ -1396,7 +1400,23 @@ filter: grayscale(0%);
   background: #DF4D3D !important;
   border: solid 1px  #DF4D3D;
   cursor: pointer !important;
+  margin-bottom: 10px;
 }
+
+.whatsapp{
+  color: #FFF !important;
+  background: #1EBEA5 !important;
+  border: solid 1px  #1EBEA5;
+  cursor: pointer !important;
+  margin-bottom: 10px;
+}
+
+
+
+
+.redesLink:hover{
+  padding: 0px !important;
+} 
 
  
 

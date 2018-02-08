@@ -20,7 +20,7 @@
 
    <div class="menuIcon" (click)="toggle2()"></div>
 
-  <div class="logo">
+  <div class="logo" (click)="GoToInicio()">
     <img src="assets/images/home/Elige-2018-logo.png">
   </div><!-- logo -->
   
@@ -164,6 +164,10 @@
  <button class="facebook" ceiboShare  [facebook]="{u: repoUrl}">Facebook</button>
 <button class="twitter" ceiboShare  [twitter]="{url:repoUrl, text:TweetTitulo+', más información en el siguiente enlace: '}">Twitter</button>
 <button class="google" ceiboShare  [googlePlus]="{url:repoUrl}">Google Plus</button>
+
+<a [href]="sanitize(repoUrlWA)" data-action="share/whatsapp/share">
+  <button class="whatsapp">WhatsApp</button>
+</a>
 
 
 
