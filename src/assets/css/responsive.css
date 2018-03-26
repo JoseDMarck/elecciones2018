@@ -743,7 +743,7 @@
 
 .NotasRelacionadas > .BloqueInformacion > .imagen{
     width: 100%;
-    height: auto;
+    height: 180px;
     float: none;
     margin-bottom: 10px;
 }

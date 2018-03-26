@@ -70,13 +70,16 @@ export class PostSingleComponent implements OnInit {
   repoUrlWA:any;
   repoUrlWA2:any;
   sanitizedUrl:any
+  reloadState: any;
  
  constructor(private postsService: PostsService,  private router: Router,  private route: ActivatedRoute, private sanitizer: DomSanitizer) { 
    this.arregloCountCat = [];
     this.loadMoreVisible = false;
     this.futureString = "July 1, 2018 00:00:00";
     this.post_count = 20;
-      
+    //this.reloadState = this.route.snapshot.queryParamMap.get("refresh");
+    
+
   }
 
 
@@ -97,10 +100,22 @@ export class PostSingleComponent implements OnInit {
          console.log("CATEGORIA", this.categoria)
          console.log("CURRENT ID", this.current_id)
          this.getPostRelated(this.categoria, this.current_id);
-         this.repoUrl = 'http://michoacantrespuntocero.com/2018elecciones.com/posts-redes/'+this.slugArray;
+         this.repoUrl = 'http://michoacantrespuntocero.com/2018elecciones.com/'+this.slugArray;
          this.repoUrlWA = 'whatsapp://send?text='+this.repoUrl;
          this.sanitizedUrl = this.sanitizer.bypassSecurityTrustUrl('http://michoacantrespuntocero.com/2018elecciones.com/las-mujeres-que-proponen');
-         console.log("asdasdasdasd", this.sanitizedUrl);
+         this.reloadState = this.route.snapshot.queryParamMap.get("refresh");
+
+
+        if(this.reloadState === "1"){
+          console.log("Reloaded Page OK", this.reloadState);
+          this.router.navigate([slug], { queryParams:{refresh:"0"} }); 
+          setTimeout(()=>{ window.location.reload(); }, 800); 
+        }
+        else{
+          console.log("Reloaded Page NO", this.reloadState);      
+        }
+         
+         
 
       });
   }
@@ -110,9 +125,7 @@ export class PostSingleComponent implements OnInit {
       .getPostsRelated(cat, current_id)
       .subscribe(res => {
         this.posts_related = res;
-
         console.log(this.posts_related)
-         //this.imageX = this.sanitizer.bypassSecurityTrustStyle(`url(${element.image})`);
       });
   }
 
@@ -159,7 +172,8 @@ export class PostSingleComponent implements OnInit {
 
   ngAfterViewInit() {
 
-    
+
+    //window.location.reload();
 
    
    console.log("estoy  en ngAfterViewInit")
@@ -181,10 +195,14 @@ export class PostSingleComponent implements OnInit {
   }
 
 
-  selectPost(slug) {
-   this.router.navigate([slug]);
+  selectPost(slug:string) {
+   this.router.navigate([slug], { queryParams:{refresh:"1"} });
    console.log("Slug normal", slug)
+   slug = "";
   }
+
+
+ 
 
 getBackground(image) {
     return this.sanitizer.bypassSecurityTrustStyle(`linear-gradient(rgba(29, 29, 29, 0), rgba(16, 16, 23, 0.5)), url(${image})`);

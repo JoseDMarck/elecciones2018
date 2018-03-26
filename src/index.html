@@ -17,12 +17,18 @@
 </script>
 
 
+<?php 
+$urlImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); 
+$extracto = (get_post_meta($post->ID, 'id_post_extracto', true));
+?>
 
-<meta property="og:url"                content="http://michoacantrespuntocero.com/2018elecciones.com/" />
+<meta property="og:url"                content="<?php the_permalink(); ?>" />
 <meta property="og:type"               content="article" />
-<meta property="og:title"              content="Elecciones 2018" />
-<meta property="og:description"        content="Rumbo a las Elecciones del 2018" />
-<meta property="og:image"              content="http://michoacantrespuntocero.com/2018elecciones.com/assets/images/home/portada1200x630.png" />
+<meta property="og:title"              content="<?php echo the_title(); ?>" />
+<meta property="og:description"        content="<?php echo $extracto; ?>" />
+<meta property="og:image"              content="<?php echo $urlImage;  ?>" />
+
+
 
 
 
