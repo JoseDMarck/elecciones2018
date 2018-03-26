@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, OnDestroy  } from '@angular/core';
 import { Post } from '../post';
 import { PostsService } from '../posts.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
@@ -71,6 +71,7 @@ export class PostSingleComponent implements OnInit {
   repoUrlWA2:any;
   sanitizedUrl:any
   reloadState: any;
+
  
  constructor(private postsService: PostsService,  private router: Router,  private route: ActivatedRoute, private sanitizer: DomSanitizer) { 
    this.arregloCountCat = [];
@@ -78,8 +79,7 @@ export class PostSingleComponent implements OnInit {
     this.futureString = "July 1, 2018 00:00:00";
     this.post_count = 20;
     //this.reloadState = this.route.snapshot.queryParamMap.get("refresh");
-    
-
+  
   }
 
 
@@ -109,11 +109,13 @@ export class PostSingleComponent implements OnInit {
         if(this.reloadState === "1"){
           console.log("Reloaded Page OK", this.reloadState);
           this.router.navigate([slug], { queryParams:{refresh:"0"} }); 
-          setTimeout(()=>{ window.location.reload(); }, 800); 
+          //setTimeout(()=>{ window.location.reload(); }, 800); 
         }
         else{
           console.log("Reloaded Page NO", this.reloadState);      
         }
+
+
          
          
 
@@ -135,11 +137,12 @@ export class PostSingleComponent implements OnInit {
   }
 
   ngOnInit() {
-   
 
   	this.route.params.forEach((params: Params) => {
        let slug = params['slug'];
        this.getPost(slug)
+       this.post = null;
+       window.scrollTo(0, 0);
     });
 
 
@@ -198,7 +201,6 @@ export class PostSingleComponent implements OnInit {
   selectPost(slug:string) {
    this.router.navigate([slug], { queryParams:{refresh:"1"} });
    console.log("Slug normal", slug)
-   slug = "";
   }
 
 
@@ -208,5 +210,6 @@ getBackground(image) {
     return this.sanitizer.bypassSecurityTrustStyle(`linear-gradient(rgba(29, 29, 29, 0), rgba(16, 16, 23, 0.5)), url(${image})`);
 }
 
+ 
 
 }
