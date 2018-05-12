@@ -87,50 +87,50 @@ private postsUrl = "http://michoacantrespuntocero.com/2018elecciones.com/wp-json
  
   getPosts_Entrana(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=29&posts_per_page=100&order=desc')
+        .get(this.postsUrl + 'posts?categories=29&order=desc')
         .map((res: Response) => res.json());
   }
 
 
   getPosts_AsiPaso(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=30&posts_per_page=100&order=desc')
+        .get(this.postsUrl + 'posts?categories=30&order=desc')
         .map((res: Response) => res.json());
   }
 
   getPosts_DondeDice(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=31&posts_per_page=100&order=desc')
+        .get(this.postsUrl + 'posts?categories=31&order=desc')
         .map((res: Response) => res.json());
   }
 
   getPosts_QueMePerdi(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=32&posts_per_page=100&order=desc')
+        .get(this.postsUrl + 'posts?categories=32&order=desc')
         .map((res: Response) => res.json());
   }
 
   getPosts_QueProponen(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=33&posts_per_page=100&order=desc')
+        .get(this.postsUrl + 'posts?categories=33&order=desc')
         .map((res: Response) => res.json());
   }
 
   getPosts_QueSeViene(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=34&posts_per_page=100&order=desc')
+        .get(this.postsUrl + 'posts?categories=34&order=desc')
         .map((res: Response) => res.json());
   }
 
   getPosts_QuienJala(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=36&posts_per_page=100&order=desc')
+        .get(this.postsUrl + 'posts?categories=36&order=desc')
         .map((res: Response) => res.json());
   }
 
   getPosts_Noticias(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=67&posts_per_page=100&order=desc')
+        .get(this.postsUrl + 'posts?categories=67&order=desc')
         .map((res: Response) => res.json());
   }
 

@@ -213,8 +213,8 @@ GoToInicio() {
 
 onScroll () {
 
-    if (this.post_count <=  90) {
-      this.post_count = this.post_count + 5;
+    if (this.post_count <=  1000) {
+      this.post_count = this.post_count + 20;
       console.log('scrolled!!', this.post_count )
       this.LoadMorePosts(this.post_count)
     } 

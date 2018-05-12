@@ -1,6 +1,23 @@
 <?php ob_start(); ?>
 <?php
 
+
+add_filter( 'rest_post_collection_params', 'my_prefix_change_post_per_page', 10, 1 );
+
+function my_prefix_change_post_per_page( $params ) {
+    if ( isset( $params['per_page'] ) ) {
+        $params['per_page']['maximum'] = 999999;
+    }
+
+    return $params;
+}
+
+
+if ( is_user_logged_in() ) {
+  add_filter( 'show_admin_bar', '__return_true' , 1000 );
+}
+
+
 if (function_exists('add_theme_support'))
 {
     // Add Menu Support
@@ -109,6 +126,7 @@ function  Extracto ($post_id){
 
     return $the_excerpt;
 }
+
 
 
 
