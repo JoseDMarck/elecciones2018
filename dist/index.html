@@ -1,0 +1,72 @@
+<!doctype html>
+<html >
+<head>
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36525743-3"></script>
+
+<script>
+ 
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-36525743-3');
+</script>
+
+
+<?php 
+$urlImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); 
+$extracto = (get_post_meta($post->ID, 'id_post_extracto', true));
+?>
+
+<meta property="og:url"                content="<?php the_permalink(); ?>" />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="<?php echo the_title(); ?>" />
+<meta property="og:description"        content="<?php echo $extracto; ?>" />
+<meta property="og:image"              content="<?php echo $urlImage;  ?>" />
+
+
+
+
+
+  
+
+  <title>Elecciones2018.mx</title>
+  
+  <!--  http://michoacantrespuntocero.com/2018elecciones.com/ -->
+  <base href="http://michoacantrespuntocero.com/2018elecciones.com/">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/web-animations.min.js"></script>
+  <link rel="icon" href="assets/images/home/Icono.png" sizes="32x32" />
+
+<link href="/2018elecciones.com/wp-content/themes/wpng2/dist/styles.d41d8cd98f00b204e980.bundle.css" rel="stylesheet"/></head>
+
+
+<body class="flexcroll-Azul">
+
+
+  <app-root>
+  	 	
+<div class="Loading">
+  <div class="image_loading">
+      <img src="assets/images/home/Elige-2018-logo.png">
+  </div>
+</div>
+
+
+  </app-root><!-- App - Root -->
+
+
+
+
+
+<script type="text/javascript" src="/2018elecciones.com/wp-content/themes/wpng2/dist/inline.cb5883f4519ef9bbb61d.bundle.js"></script><script type="text/javascript" src="/2018elecciones.com/wp-content/themes/wpng2/dist/polyfills.0a4a79199173186b5384.bundle.js"></script><script type="text/javascript" src="/2018elecciones.com/wp-content/themes/wpng2/dist/vendor.de49a3d32072c1144a9a.bundle.js"></script><script type="text/javascript" src="/2018elecciones.com/wp-content/themes/wpng2/dist/main.c40b36d3ec17306c7cfa.bundle.js"></script></body>
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+ 
+
+</html>

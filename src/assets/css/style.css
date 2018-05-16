@@ -51,6 +51,17 @@ body{
 }
 
 
+/* --------------------------------------------------------
+/* ---- BUSQUEDA 
+-------------------------------------------------------- */
+
+
+.contenedorBuscarPost{
+ width: 50%;
+ height: 30px;
+ margin: 0 auto;
+ margin-bottom: 60px;
+}
 
  
 
@@ -365,6 +376,23 @@ body{
 }
 
 .texto_publicaciones span{
+  color: #CF0C00;
+}
+
+
+.texto_publicaciones_search {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Gotham-Black";
+   font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.texto_publicaciones_search span{
   color: #CF0C00;
 }
 

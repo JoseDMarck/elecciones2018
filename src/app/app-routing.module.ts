@@ -10,6 +10,7 @@ import { QueProponenComponent } from './posts/que-proponen/que-proponen.componen
 import { QueSeVieneComponent  } from './posts/que-se-viene/que-se-viene.component';
 import { QuienJalaComponent  } from './posts/quien-jala/quien-jala.component';
 import { NoticiasComponent  } from './posts/noticias/noticias.component';
+import { BusquedaPageComponent  } from './posts/busqueda-page/busqueda-page.component';
 
 
 
@@ -59,6 +60,12 @@ const routes: Routes = [
   {
     path: 'publicaciones-noticias',
     component: NoticiasComponent,
+    pathMatch: 'full'
+  },
+
+  {
+    path: 'publicaciones-busqueda',
+    component: BusquedaPageComponent,
     pathMatch: 'full'
   },
 

@@ -141,6 +141,19 @@ private postsUrl = "http://michoacantrespuntocero.com/2018elecciones.com/wp-json
         .map((res: Response) => res.json());
   }
 
+  getPostsSearchFull(): Observable<Post[]> {
+    return this.http
+      .get(this.postsUrl + 'posts?per_page=300&order=desc')
+      .map((res: Response) => res.json());
+}
+
+  // LOADMORE HOME
+  LoadMorePostsServiceSearch( numero): Observable<Post[]> {
+    return this.http
+      .get(this.postsUrl + 'posts?per_page='+numero+'&order=desc')
+      .map((res: Response) => res.json());
+}
+
 
 
 

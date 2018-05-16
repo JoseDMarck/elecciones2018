@@ -17,11 +17,16 @@ import { QuienJalaComponent  } from './posts/quien-jala/quien-jala.component';
 import { ContadorComponent } from './posts/contador/contador.component';
 import { ContadorMovilComponent } from './posts/contador-movil/contador-movil.component';
 import { NoticiasComponent  } from './posts/noticias/noticias.component';
-import {ShareModule} from 'ng2share/share.module'
+import {ShareModule} from 'ng2share/share.module';
 import { MenuGeneralComponent } from './posts/menu-general/menu-general.component';
+import { BusquedaPageComponent  } from './posts/busqueda-page/busqueda-page.component';
+
 import { RouterModule } from '@angular/router';
 import { CeiboShare } from 'ng2-social-share';
+
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 
 @NgModule({
@@ -39,6 +44,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     QuienJalaComponent, 
     ContadorComponent,
     NoticiasComponent,
+    BusquedaPageComponent,
     ContadorMovilComponent,
     CeiboShare
   ],
@@ -49,6 +55,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     Wpng2RoutingModule,
     ShareModule,
     InfiniteScrollModule,
+    Ng2SearchPipeModule,
     BrowserAnimationsModule
   ],
   providers: [Title],
